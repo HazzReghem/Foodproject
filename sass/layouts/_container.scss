@@ -2,3 +2,109 @@
     width: 100%;
     font-family: $roboto;
 }
+
+#fonctionnement {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 350px;
+    font-family: $roboto-bold;
+    h2 {
+        font-size: 140%;
+        margin-bottom: 30px;
+    }
+    ol {
+        padding-left: 20px;
+        li {   
+            height: 60px; 
+            border: 1px solid white;
+            border-radius: 20px;
+            box-shadow: 0px 3px 5px 1px $colour-shadow; 
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;       
+            i {
+                color: #828282;
+                width: 15%;
+                padding-left: 30px;
+                font-size: 115%;
+            }
+        }
+        #taste {
+            background-color: #f5edff;
+            border-color: #f5edff;
+            i {
+            color: $colour-primary;
+            }
+        }
+    }
+}
+
+#restaurants {
+    background-color: $colour-grey;
+    padding-top: 30px;
+    h2 {
+        padding-left: 20px;
+        font-family: $roboto-bold;
+        font-size: 140%;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+        #card1, #card2, #card3, #card4 {
+            height: 300px;
+            width: 100%;
+            border: 0px solid white;
+            background-color: white;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            .card_img {
+                height: 70%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .card_desc h4 {
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #353535;
+    height: 175px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    h4 {
+        font-family: $shrik;
+        color: white;
+        font-weight: normal;
+        padding-left: 20px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        padding-left: 20px;
+        margin-bottom: 5px;
+        i {
+            font-size: 80%;
+            width: 25px;
+        }
+        .fa-handshake-angle {
+            font-size: 65%;
+        }
+    }
+    p {
+        margin: 0;
+        margin-bottom: 5px;
+        padding-left: 20px;
+    }
+}

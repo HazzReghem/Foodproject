@@ -78,4 +78,110 @@
   font-family: "Roboto", serif;
 }
 
+#fonctionnement {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 350px;
+  font-family: "Roboto-bold", serif;
+}
+#fonctionnement h2 {
+  font-size: 140%;
+  margin-bottom: 30px;
+}
+#fonctionnement ol {
+  padding-left: 20px;
+}
+#fonctionnement ol li {
+  height: 60px;
+  border: 1px solid white;
+  border-radius: 20px;
+  box-shadow: 0px 3px 5px 1px #d3d3d3;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+#fonctionnement ol li i {
+  color: #828282;
+  width: 15%;
+  padding-left: 30px;
+  font-size: 115%;
+}
+#fonctionnement ol #taste {
+  background-color: #f5edff;
+  border-color: #f5edff;
+}
+#fonctionnement ol #taste i {
+  color: #9356DC;
+}
+
+#restaurants {
+  background-color: #f6f6f6;
+  padding-top: 30px;
+}
+#restaurants h2 {
+  padding-left: 20px;
+  font-family: "Roboto-bold", serif;
+  font-size: 140%;
+}
+#restaurants a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#restaurants a #card1, #restaurants a #card2, #restaurants a #card3, #restaurants a #card4 {
+  height: 300px;
+  width: 100%;
+  border: 0px solid white;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+#restaurants a #card1 .card_img, #restaurants a #card2 .card_img, #restaurants a #card3 .card_img, #restaurants a #card4 .card_img {
+  height: 70%;
+  overflow: hidden;
+}
+#restaurants a #card1 .card_img img, #restaurants a #card2 .card_img img, #restaurants a #card3 .card_img img, #restaurants a #card4 .card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#restaurants a #card1 .card_desc h4, #restaurants a #card2 .card_desc h4, #restaurants a #card3 .card_desc h4, #restaurants a #card4 .card_desc h4 {
+  font-weight: normal;
+}
+
+footer {
+  background-color: #353535;
+  height: 175px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+footer h4 {
+  font-family: "Shrikhand", serif;
+  color: white;
+  font-weight: normal;
+  padding-left: 20px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+footer a i {
+  font-size: 80%;
+  width: 25px;
+}
+footer a .fa-handshake-angle {
+  font-size: 65%;
+}
+footer p {
+  margin: 0;
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
