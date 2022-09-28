@@ -196,6 +196,7 @@
 #restaurants a .card .card_desc .card_fav i:hover::before {
   transition: all ease-in-out 800ms;
   background-clip: text;
+  -webkit-background-clip: text;
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-text-fill-color: transparent;
   font-weight: 900;

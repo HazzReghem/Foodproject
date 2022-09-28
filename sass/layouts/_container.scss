@@ -107,7 +107,7 @@
                         &:hover::before {
                             transition: all ease-in-out 800ms;
                             background-clip: text;
-                            // -webkit-background-clip: text;
+                            -webkit-background-clip: text;
                             background-image: linear-gradient($colour-secondary, $colour-primary);
                             -webkit-text-fill-color: transparent;
                             font-weight: 900;
