@@ -28,12 +28,25 @@
                 padding-left: 30px;
                 font-size: 115%;
             }
-        }
-        #taste {
-            background-color: #f5edff;
-            border-color: #f5edff;
-            i {
-            color: $colour-primary;
+            &:hover {
+                background-color: $colour-pale-purple;
+                border-color: $colour-pale-purple;
+                i {
+                color: $colour-primary;
+                }
+            }
+            span {
+                border-radius: 20px;
+                background-color: $colour-primary;
+                color: white;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 75%;
+                position: relative;
+                right: 10px;
             }
         }
     }
@@ -42,6 +55,7 @@
 #restaurants {
     background-color: $colour-grey;
     padding-top: 30px;
+    height: 1430px;
     h2 {
         padding-left: 20px;
         font-family: $roboto-bold;
@@ -51,9 +65,11 @@
         text-decoration: none;
         color: black;
         display: block;
-        padding-left: 20px;
-        padding-right: 20px;
-        #card1, #card2, #card3, #card4 {
+        margin-left: 20px;
+        margin-right: 20px;
+        .card {
+            display: flex;
+            flex-direction: column;
             height: 300px;
             width: 100%;
             border: 0px solid white;
@@ -61,18 +77,68 @@
             overflow: hidden;
             margin-bottom: 30px;
             border-radius: 20px;
-            .card_img {
-                height: 70%;
-                overflow: hidden;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+            box-shadow: 1px 5px 8px 1px $colour-shadow;
+            img {
+                height: 75%;
+                object-fit: cover;
+            }
+            &:hover {
+                box-shadow: 3px 8px 8px 3px darken($colour-shadow, 10%);
+                transition: box-shadow 500ms;
+            }
+            .card_desc {
+                display: flex;
+                justify-content: space-between;
+                padding-left: 10px;
+                h3 {
+                margin-bottom: 5px;
                 }
-            }
-            .card_desc h4 {
+                h4 {
                 font-weight: normal;
-            }
+                margin-top: 0px;
+                }
+                .card_fav {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-right: 20px;
+                    i {
+                        font-size: 150%;
+                        &:hover::before {
+                            transition: all ease-in-out 800ms;
+                            background-clip: text;
+                            // -webkit-background-clip: text;
+                            background-image: linear-gradient($colour-secondary, $colour-primary);
+                            -webkit-text-fill-color: transparent;
+                            font-weight: 900;
+                        }
+                    }
+                }
+                .card_texte {
+                    width: 90%;
+                }
+            } 
+            .card_new {
+                position: relative;
+                bottom: 290px;
+                left: 125px;
+                display: flex;
+                justify-content: center;
+                height: 0px;
+                span {
+                    color: darken($colour-tertiary, 40%);
+                    border: 1px solid $colour-tertiary;
+                    border-radius: 3px;
+                    background-color: $colour-tertiary;
+                    height: 30px;
+                    width: 90px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 90%;
+                    font-family: $roboto-bold;
+                }
+            }   
         }
     }
 }
@@ -83,6 +149,7 @@ footer {
     color: white;
     display: flex;
     flex-direction: column;
+    font-family: $roboto;
     h4 {
         font-family: $shrik;
         color: white;
