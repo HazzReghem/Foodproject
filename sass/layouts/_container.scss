@@ -3,6 +3,88 @@
     font-family: $roboto;
 }
 
+#loader_wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: $colour-grey;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fading 1s 2s ease-out forwards;
+    .lds-ellipsis {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        div {
+            position: absolute;
+            top: 33px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: linear-gradient($colour-secondary, $colour-primary);
+            animation-timing-function: cubic-bezier(0, 1, 1, 0);
+            &:nth-child(1) {
+                left: 8px;
+                animation: lds-ellipsis1 0.6s infinite;
+            }
+            &:nth-child(2) {
+                left: 8px;
+                animation: lds-ellipsis2 0.6s infinite;
+            }
+            &:nth-child(3) {
+                left: 32px;
+                animation: lds-ellipsis2 0.6s infinite;
+            }
+            &:nth-child(4) {
+                left: 56px;
+                animation: lds-ellipsis3 0.6s infinite;
+            }
+        }
+    }
+  
+    @keyframes fading {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+            transform: translateX(-10000px);
+        }
+    }
+    @keyframes lds-ellipsis1 {
+        0% {
+        transform: scale(0);
+        }
+        100% {
+        transform: scale(1);
+        }
+    }
+    @keyframes lds-ellipsis3 {
+        0% {
+        transform: scale(1);
+        }
+        100% {
+        transform: scale(0);
+        }
+    }
+    @keyframes lds-ellipsis2 {
+        0% {
+        transform: translate(0, 0);
+        }
+        100% {
+        transform: translate(24px, 0);
+        }
+    }
+}
+  
+
 #fonctionnement {
     padding-left: 20px;
     padding-right: 20px;
@@ -105,7 +187,7 @@
                     i {
                         font-size: 150%;
                         &:hover::before {
-                            transition: all ease-in-out 800ms;
+                            transition: all ease-in-out 500ms;
                             background-clip: text;
                             -webkit-background-clip: text;
                             background-image: linear-gradient($colour-secondary, $colour-primary);
@@ -120,8 +202,8 @@
             } 
             .card_new {
                 position: relative;
-                bottom: 290px;
-                left: 125px;
+                bottom: 95%;
+                left: 30%;
                 display: flex;
                 justify-content: center;
                 height: 0px;
@@ -130,12 +212,12 @@
                     border: 1px solid $colour-tertiary;
                     border-radius: 3px;
                     background-color: $colour-tertiary;
-                    height: 30px;
-                    width: 90px;
+                    height: 25px;
+                    width: 80px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-size: 90%;
+                    font-size: 80%;
                     font-family: $roboto-bold;
                 }
             }   
