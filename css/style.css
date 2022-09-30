@@ -29,7 +29,7 @@
   animation-fill-mode: both;
 }
 
-#logo {
+.logo {
   height: 60px;
   width: 100%;
   display: flex;
@@ -37,7 +37,7 @@
   align-items: center;
   border-bottom: 1px solid #d3d3d3;
 }
-#logo img {
+.logo img {
   width: 175px;
 }
 
@@ -81,6 +81,13 @@
   margin-bottom: 30px;
 }
 
+.logo a {
+  position: absolute;
+  left: 30px;
+  font-size: 150%;
+  color: black;
+}
+
 #wrapper {
   width: 100%;
   font-family: "Roboto", serif;
@@ -97,9 +104,14 @@
   right: 0;
   z-index: 1000;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: fading 1s 2s ease-out forwards;
+  animation: fading 5s 2s ease-in-out forwards;
+}
+#loader_wrapper p {
+  font-family: "Shrikhand", serif;
+  text-align: center;
 }
 #loader_wrapper .lds-ellipsis {
   display: inline-block;
@@ -138,7 +150,7 @@
   }
   to {
     opacity: 0;
-    transform: translateX(-10000px);
+    transform: translateY(100000px);
   }
 }
 @keyframes lds-ellipsis1 {
@@ -270,10 +282,10 @@
   align-items: center;
   padding-right: 20px;
 }
-#restaurants a .card .card_desc .card_fav i {
+#restaurants a .card .card_desc .card_fav > i {
   font-size: 150%;
 }
-#restaurants a .card .card_desc .card_fav i:hover::before {
+#restaurants a .card .card_desc .card_fav > i:hover::before {
   transition: all ease-in-out 500ms;
   background-clip: text;
   -webkit-background-clip: text;
@@ -337,6 +349,187 @@ footer p {
   margin: 0;
   margin-bottom: 5px;
   padding-left: 20px;
+}
+
+.head_pic {
+  width: 100%;
+  height: 300px;
+}
+.head_pic img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  height: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: 1px solid #f6f6f6;
+  border-radius: 40px;
+  background: #f6f6f6;
+  position: relative;
+  bottom: 70px;
+}
+.menu .menu_title {
+  font-family: "Shrikhand", serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.menu .menu_title h2 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 170%;
+}
+.menu .menu_title > i {
+  font-size: 150%;
+  margin-right: 30px;
+}
+.menu .menu_title > i:hover::before {
+  transition: all ease-in-out 500ms;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+.menu .starter > h3 {
+  font-weight: normal;
+  font-size: 110%;
+  width: 45px;
+  height: 25px;
+  border-bottom: 3px solid #99E2D0;
+}
+.menu .starter a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+.menu .starter a .starter_card {
+  height: 70px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0px 3px 5px 1px #d3d3d3;
+}
+.menu .starter a .starter_card > h3 {
+  margin: 0;
+  padding: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .starter a .starter_card .starter_desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 20px 0 10px;
+}
+.menu .starter a .starter_card .starter_desc > h4 {
+  margin: 0;
+  font-size: 90%;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .starter a .starter_card .starter_desc p {
+  font-weight: bold;
+  margin: 0;
+}
+.menu .dish > h3 {
+  font-weight: normal;
+  font-size: 110%;
+  width: 45px;
+  height: 25px;
+  border-bottom: 3px solid #99E2D0;
+}
+.menu .dish a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+.menu .dish a .dish_card {
+  height: 70px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0px 3px 5px 1px #d3d3d3;
+}
+.menu .dish a .dish_card > h3 {
+  margin: 0;
+  padding: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .dish a .dish_card .dish_desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 20px 0 10px;
+}
+.menu .dish a .dish_card .dish_desc > h4 {
+  margin: 0;
+  font-size: 90%;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .dish a .dish_card .dish_desc p {
+  font-weight: bold;
+  margin: 0;
+}
+.menu .dessert > h3 {
+  font-weight: normal;
+  font-size: 110%;
+  width: 45px;
+  height: 25px;
+  border-bottom: 3px solid #99E2D0;
+}
+.menu .dessert a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+.menu .dessert a .dessert_card {
+  height: 70px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0px 3px 5px 1px #d3d3d3;
+}
+.menu .dessert a .dessert_card > h3 {
+  margin: 0;
+  padding: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .dessert a .dessert_card .dessert_desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 20px 0 10px;
+}
+.menu .dessert a .dessert_card .dessert_desc > h4 {
+  margin: 0;
+  font-size: 90%;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .dessert a .dessert_card .dessert_desc p {
+  font-weight: bold;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

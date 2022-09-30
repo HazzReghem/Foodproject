@@ -14,9 +14,14 @@
     right: 0;
     z-index: 1000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: fading 1s 2s ease-out forwards;
+    animation: fading 5s 2s ease-in-out forwards;
+    p {
+        font-family: $shrik;
+        text-align: center;
+    }
     .lds-ellipsis {
         display: inline-block;
         position: relative;
@@ -55,7 +60,7 @@
         }
         to {
             opacity: 0;
-            transform: translateX(-10000px);
+            transform: translateY(100000px);   
         }
     }
     @keyframes lds-ellipsis1 {
@@ -184,7 +189,7 @@
                     justify-content: center;
                     align-items: center;
                     padding-right: 20px;
-                    i {
+                    > i {
                         font-size: 150%;
                         &:hover::before {
                             transition: all ease-in-out 500ms;
@@ -256,4 +261,193 @@ footer {
         margin-bottom: 5px;
         padding-left: 20px;
     }
+}
+
+// ----------- CARD ---------------
+
+.head_pic {
+    width: 100%;
+    height: 300px;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.menu {
+    height: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top: 1px solid $colour-grey;
+    border-radius: 40px;
+    background: $colour-grey;
+    position: relative;
+    bottom: 70px;
+    .menu_title {
+        font-family: $shrik;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        h2 {
+            margin: 0;
+            font-weight: normal;
+            font-size: 170%;
+        }
+        > i {
+            font-size: 150%;
+            margin-right: 30px;
+            &:hover::before {
+                transition: all ease-in-out 500ms;
+                background-clip: text;
+                -webkit-background-clip: text;
+                background-image: linear-gradient($colour-secondary, $colour-primary);
+                -webkit-text-fill-color: transparent;
+                font-weight: 900;
+            }
+        }
+    }
+    .starter {
+        > h3 {
+            font-weight: normal;
+            font-size: 110%;
+            width: 45px;
+            height: 25px;
+            border-bottom: 3px solid $colour-tertiary;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            .starter_card {
+                height: 70px;
+                background-color: white;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                box-shadow: 0px 3px 5px 1px $colour-shadow;
+                > h3 {
+                    margin: 0;
+                    padding: 10px 0 0 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .starter_desc {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 10px;
+                    padding: 0 20px 0 10px;
+                    > h4 {
+                        margin: 0;
+                        font-size: 90%;
+                        font-weight: normal;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    p {
+                        font-weight: bold;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .dish {
+        > h3 {
+            font-weight: normal;
+            font-size: 110%;
+            width: 45px;
+            height: 25px;
+            border-bottom: 3px solid $colour-tertiary;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            .dish_card {
+                height: 70px;
+                background-color: white;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                box-shadow: 0px 3px 5px 1px $colour-shadow;
+                > h3 {
+                    margin: 0;
+                    padding: 10px 0 0 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .dish_desc {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 10px;
+                    padding: 0 20px 0 10px;
+                    > h4 {
+                        margin: 0;
+                        font-size: 90%;
+                        font-weight: normal;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    p {
+                        font-weight: bold;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .dessert {
+        > h3 {
+            font-weight: normal;
+            font-size: 110%;
+            width: 45px;
+            height: 25px;
+            border-bottom: 3px solid $colour-tertiary;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            .dessert_card {
+                height: 70px;
+                background-color: white;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                box-shadow: 0px 3px 5px 1px $colour-shadow;
+                > h3 {
+                    margin: 0;
+                    padding: 10px 0 0 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .dessert_desc {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 10px;
+                    padding: 0 20px 0 10px;
+                    > h4 {
+                        margin: 0;
+                        font-size: 90%;
+                        font-weight: normal;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    p {
+                        font-weight: bold;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }      
 }
