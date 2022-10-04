@@ -354,11 +354,11 @@ footer p {
 .wrapper_card {
   width: 100%;
   font-family: "Roboto", serif;
-  height: 1440px;
+  height: 1515px;
 }
 
 .wrapper_card2 {
-  height: 1535px;
+  height: 1625px;
   width: 100%;
   font-family: "Roboto", serif;
 }
@@ -374,7 +374,7 @@ footer p {
 }
 
 .menu {
-  height: 1150px;
+  height: 1225px;
   padding-left: 20px;
   padding-right: 20px;
   border-top: 1px solid #f6f6f6;
@@ -409,6 +409,9 @@ footer p {
   -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
+.menu .starter {
+  overflow: hidden;
+}
 .menu .starter > h3 {
   font-weight: normal;
   font-size: 110%;
@@ -426,21 +429,33 @@ footer p {
   background-color: white;
   border-radius: 15px;
   margin-bottom: 20px;
-  box-shadow: 0px 3px 5px 1px #d3d3d3;
-}
-.menu .starter a .starter_card > h3 {
-  margin: 0;
-  padding: 10px 0 0 10px;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 3px 5px 1px #d3d3d3;
+  animation: fading-menu 0.6s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
+}
+.menu .starter a .starter_card:hover .coche {
+  margin-right: 0;
+  transition: margin-right 0.5s ease-out;
+}
+.menu .starter a .starter_card:hover .coche > i {
+  transform: rotate(360deg);
+  transition: transform 0.8s;
 }
 .menu .starter a .starter_card .starter_desc {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-top: 0px;
+  padding-left: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.menu .starter a .starter_card .starter_desc > h3 {
   margin-top: 10px;
-  padding: 0 20px 0 10px;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .starter a .starter_card .starter_desc > h4 {
   margin: 0;
@@ -450,9 +465,36 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu .starter a .starter_card .starter_desc p {
+.menu .starter a .starter_card .price {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 20px;
+  margin-left: auto;
+  padding-right: 10px;
+}
+.menu .starter a .starter_card .price p {
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 5px;
+}
+.menu .starter a .starter_card .coche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  background: #71d7be;
+  color: white;
+  margin-right: -90px;
+}
+.menu .starter a .delay-1 {
+  animation: fading-menu 0.8s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 0.8s ease-in-out 0s forwards;
+}
+.menu .starter a .delay-2 {
+  animation: fading-menu 1s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 1s ease-in-out 0s forwards;
+}
+.menu .dish {
+  overflow: hidden;
 }
 .menu .dish > h3 {
   font-weight: normal;
@@ -468,24 +510,36 @@ footer p {
 }
 .menu .dish a .dish_card {
   height: 70px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
   background-color: white;
   border-radius: 15px;
   margin-bottom: 20px;
   box-shadow: 0px 3px 5px 1px #d3d3d3;
+  animation: fading-menu 1.2s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
 }
-.menu .dish a .dish_card > h3 {
-  margin: 0;
-  padding: 10px 0 0 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.menu .dish a .dish_card:hover .coche {
+  margin-right: 0;
+  transition: margin-right 0.5s ease-out;
+}
+.menu .dish a .dish_card:hover .coche > i {
+  transform: rotate(360deg);
+  transition: transform 0.8s;
 }
 .menu .dish a .dish_card .dish_desc {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-top: 0px;
+  padding-left: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.menu .dish a .dish_card .dish_desc > h3 {
   margin-top: 10px;
-  padding: 0 20px 0 10px;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .dish a .dish_card .dish_desc > h4 {
   margin: 0;
@@ -495,9 +549,36 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu .dish a .dish_card .dish_desc p {
+.menu .dish a .dish_card .price {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 20px;
+  margin-left: auto;
+  padding-right: 10px;
+}
+.menu .dish a .dish_card .price p {
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 5px;
+}
+.menu .dish a .dish_card .coche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  background: #71d7be;
+  color: white;
+  margin-right: -90px;
+}
+.menu .dish a .delay-1 {
+  animation: fading-menu 1.4s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
+}
+.menu .dish a .delay-2 {
+  animation: fading-menu 1.6s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 1.6s ease-in-out 0s forwards;
+}
+.menu .dessert {
+  overflow: hidden;
 }
 .menu .dessert > h3 {
   font-weight: normal;
@@ -513,24 +594,36 @@ footer p {
 }
 .menu .dessert a .dessert_card {
   height: 70px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
   background-color: white;
   border-radius: 15px;
   margin-bottom: 20px;
   box-shadow: 0px 3px 5px 1px #d3d3d3;
+  animation: fading-menu 1.8s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
 }
-.menu .dessert a .dessert_card > h3 {
-  margin: 0;
-  padding: 10px 0 0 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.menu .dessert a .dessert_card:hover .coche {
+  margin-right: 0;
+  transition: margin-right 0.5s ease-out;
+}
+.menu .dessert a .dessert_card:hover .coche > i {
+  transform: rotate(360deg);
+  transition: transform 0.8s;
 }
 .menu .dessert a .dessert_card .dessert_desc {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-top: 0px;
+  padding-left: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.menu .dessert a .dessert_card .dessert_desc > h3 {
   margin-top: 10px;
-  padding: 0 20px 0 10px;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .dessert a .dessert_card .dessert_desc > h4 {
   margin: 0;
@@ -540,9 +633,33 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu .dessert a .dessert_card .dessert_desc p {
+.menu .dessert a .dessert_card .price {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 20px;
+  margin-left: auto;
+  padding-right: 10px;
+}
+.menu .dessert a .dessert_card .price p {
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 5px;
+}
+.menu .dessert a .dessert_card .coche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  background: #71d7be;
+  color: white;
+  margin-right: -90px;
+}
+.menu .dessert a .delay-1 {
+  animation: fading-menu 2s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
+}
+.menu .dessert a .delay-2 {
+  animation: fading-menu 2.2s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 2.2s ease-in-out 0s forwards;
 }
 .menu > form {
   display: flex;
@@ -553,8 +670,19 @@ footer p {
   width: 175px;
 }
 
+@keyframes fading-menu {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes coche-anim {}
 .menu_longer {
-  height: 1245px;
+  height: 1330px;
   padding-left: 20px;
   padding-right: 20px;
   border-top: 1px solid #f6f6f6;
@@ -589,6 +717,9 @@ footer p {
   -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
+.menu_longer .starter {
+  overflow: hidden;
+}
 .menu_longer .starter > h3 {
   font-weight: normal;
   font-size: 110%;
@@ -606,21 +737,33 @@ footer p {
   background-color: white;
   border-radius: 15px;
   margin-bottom: 20px;
-  box-shadow: 0px 3px 5px 1px #d3d3d3;
-}
-.menu_longer .starter a .starter_card > h3 {
-  margin: 0;
-  padding: 10px 0 0 10px;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 3px 5px 1px #d3d3d3;
+  animation: fading-menu 0.6s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
+}
+.menu_longer .starter a .starter_card:hover .coche {
+  margin-right: 0;
+  transition: margin-right 0.5s ease-out;
+}
+.menu_longer .starter a .starter_card:hover .coche > i {
+  transform: rotate(360deg);
+  transition: transform 0.8s;
 }
 .menu_longer .starter a .starter_card .starter_desc {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-top: 0px;
+  padding-left: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.menu_longer .starter a .starter_card .starter_desc > h3 {
   margin-top: 10px;
-  padding: 0 20px 0 10px;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu_longer .starter a .starter_card .starter_desc > h4 {
   margin: 0;
@@ -630,9 +773,40 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu_longer .starter a .starter_card .starter_desc p {
+.menu_longer .starter a .starter_card .price {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 20px;
+  margin-left: auto;
+  padding-right: 10px;
+}
+.menu_longer .starter a .starter_card .price p {
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 5px;
+}
+.menu_longer .starter a .starter_card .coche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  background: #71d7be;
+  color: white;
+  margin-right: -90px;
+}
+.menu_longer .starter a .delay-1 {
+  animation: fading-menu 0.8s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 0.8s ease-in-out 0s forwards;
+}
+.menu_longer .starter a .delay-2 {
+  animation: fading-menu 1s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 1s ease-in-out 0s forwards;
+}
+.menu_longer .starter a .delay-3 {
+  animation: fading-menu 1.2s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
+}
+.menu_longer .dish {
+  overflow: hidden;
 }
 .menu_longer .dish > h3 {
   font-weight: normal;
@@ -648,24 +822,36 @@ footer p {
 }
 .menu_longer .dish a .dish_card {
   height: 70px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
   background-color: white;
   border-radius: 15px;
   margin-bottom: 20px;
   box-shadow: 0px 3px 5px 1px #d3d3d3;
+  animation: fading-menu 1.4s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
 }
-.menu_longer .dish a .dish_card > h3 {
-  margin: 0;
-  padding: 10px 0 0 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.menu_longer .dish a .dish_card:hover .coche {
+  margin-right: 0;
+  transition: margin-right 0.5s ease-out;
+}
+.menu_longer .dish a .dish_card:hover .coche > i {
+  transform: rotate(360deg);
+  transition: transform 0.8s;
 }
 .menu_longer .dish a .dish_card .dish_desc {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-top: 0px;
+  padding-left: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.menu_longer .dish a .dish_card .dish_desc > h3 {
   margin-top: 10px;
-  padding: 0 20px 0 10px;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu_longer .dish a .dish_card .dish_desc > h4 {
   margin: 0;
@@ -675,9 +861,36 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu_longer .dish a .dish_card .dish_desc p {
+.menu_longer .dish a .dish_card .price {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 20px;
+  margin-left: auto;
+  padding-right: 10px;
+}
+.menu_longer .dish a .dish_card .price p {
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 5px;
+}
+.menu_longer .dish a .dish_card .coche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  background: #71d7be;
+  color: white;
+  margin-right: -90px;
+}
+.menu_longer .dish a .delay-1 {
+  animation: fading-menu 1.6s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 1.6s ease-in-out 0s forwards;
+}
+.menu_longer .dish a .delay-2 {
+  animation: fading-menu 1.8s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
+}
+.menu_longer .dessert {
+  overflow: hidden;
 }
 .menu_longer .dessert > h3 {
   font-weight: normal;
@@ -693,24 +906,36 @@ footer p {
 }
 .menu_longer .dessert a .dessert_card {
   height: 70px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
   background-color: white;
   border-radius: 15px;
   margin-bottom: 20px;
   box-shadow: 0px 3px 5px 1px #d3d3d3;
+  animation: fading-menu 2s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
 }
-.menu_longer .dessert a .dessert_card > h3 {
-  margin: 0;
-  padding: 10px 0 0 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.menu_longer .dessert a .dessert_card:hover .coche {
+  margin-right: 0;
+  transition: margin-right 0.5s ease-out;
+}
+.menu_longer .dessert a .dessert_card:hover .coche > i {
+  transform: rotate(360deg);
+  transition: transform 0.8s;
 }
 .menu_longer .dessert a .dessert_card .dessert_desc {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-top: 0px;
+  padding-left: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.menu_longer .dessert a .dessert_card .dessert_desc > h3 {
   margin-top: 10px;
-  padding: 0 20px 0 10px;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu_longer .dessert a .dessert_card .dessert_desc > h4 {
   margin: 0;
@@ -720,9 +945,33 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu_longer .dessert a .dessert_card .dessert_desc p {
+.menu_longer .dessert a .dessert_card .price {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 20px;
+  margin-left: auto;
+  padding-right: 10px;
+}
+.menu_longer .dessert a .dessert_card .price p {
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 5px;
+}
+.menu_longer .dessert a .dessert_card .coche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  background: #71d7be;
+  color: white;
+  margin-right: -90px;
+}
+.menu_longer .dessert a .delay-1 {
+  animation: fading-menu 2.2s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 2.2s ease-in-out 0s forwards;
+}
+.menu_longer .dessert a .delay-2 {
+  animation: fading-menu 2.4s ease-in-out 0s forwards;
+  -webkit-animation: fading-menu 2.4s ease-in-out 0s forwards;
 }
 .menu_longer > form {
   display: flex;
