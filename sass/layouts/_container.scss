@@ -101,6 +101,12 @@
     }
     ol {
         padding-left: 20px;
+        max-width: 500px;
+        @include tablette {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         li {   
             height: 60px; 
             border: 1px solid white;
@@ -108,7 +114,10 @@
             box-shadow: 0px 3px 5px 1px $colour-shadow; 
             margin-bottom: 25px;
             display: flex;
-            align-items: center;       
+            align-items: center;  
+            @include tablette {
+                width: 500px;
+            }     
             i {
                 color: #828282;
                 width: 15%;
@@ -143,6 +152,9 @@
     background-color: $colour-grey;
     padding-top: 30px;
     height: 1430px;
+    @include tablette {
+        height: 1830px;
+    }
     h2 {
         padding-left: 20px;
         font-family: $roboto-bold;
@@ -165,9 +177,16 @@
             margin-bottom: 30px;
             border-radius: 20px;
             box-shadow: 1px 5px 8px 1px $colour-shadow;
+            position: relative;
+            @include tablette {
+                height: 400px;
+            }
             img {
                 height: 75%;
                 object-fit: cover;
+                @include tablette {
+                    height: 80%;
+                }
             }
             &:hover {
                 box-shadow: 3px 8px 8px 3px darken($colour-shadow, 10%);
@@ -206,9 +225,9 @@
                 }
             } 
             .card_new {
-                position: relative;
-                bottom: 95%;
-                left: 30%;
+                position: absolute;
+                top: 10px;
+                right: 20px;
                 display: flex;
                 justify-content: center;
                 height: 0px;
@@ -224,6 +243,11 @@
                     justify-content: center;
                     font-size: 80%;
                     font-family: $roboto-bold;
+                    @include tablette {
+                        height: 35px;
+                        width: 100px;
+                        font-size: 100%;
+                    }
                 }
             }   
         }
@@ -237,11 +261,20 @@ footer {
     display: flex;
     flex-direction: column;
     font-family: $roboto;
+    @include tablette {
+        height: 210px;
+        align-items: center;
+        font-size: 110%;
+        line-height: 25px;
+    }
     h4 {
         font-family: $shrik;
         color: white;
         font-weight: normal;
         padding-left: 20px;
+        @include tablette {
+            font-size: 110%;
+        }
     }
     a {
         text-decoration: none;
@@ -331,81 +364,80 @@ footer {
             height: 25px;
             border-bottom: 3px solid $colour-tertiary;
         }
-        a {
-            text-decoration: none;
+        .starter_card {
+           text-decoration: none;
             color: black;
             display: block;
-            .starter_card {
-                height: 70px;
-                background-color: white;
-                border-radius: 15px;
-                margin-bottom: 20px;
-                overflow: hidden;
-                display: flex;
-                justify-content: space-between;
-                box-shadow: 0px 3px 5px 1px $colour-shadow;
-                animation: fading-menu 0.6s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
-                &:hover {
-                    .coche {
-                        margin-right: 0;
-                        transition: margin-right 0.5s ease-out;
-                        > i {
-                            transform: rotate(360deg);
-                            transition: transform 0.8s;
-                        }
-                    }
-                }
-                .starter_desc {
-                    margin-top: 0px;
-                    padding-left: 10px;
-                    width: 100%;
-                    overflow: hidden;
-                    > h3 {
-                        margin-top: 10px;
-                        margin-bottom: 15px;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                    }
-                    > h4 {
-                        margin: 0;
-                        font-size: 90%;
-                        font-weight: normal;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-                }
-                .price {
-                    display: flex;
-                    align-items: flex-end;
-                    margin-right: 20px;
-                    margin-left: auto;
-                    padding-right: 10px;
-                    p {
-                        font-weight: bold;
-                        margin-bottom: 5px;
-                    }
-                }
+            height: 70px;
+            background-color: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0px 3px 5px 1px $colour-shadow;
+            animation: fading-menu 0.6s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
+            cursor: pointer;
+            &:hover {
                 .coche {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 80px;
-                    background: darken($colour-tertiary , 10%);
-                    color: white;
-                    margin-right: -90px;
+                    margin-right: 0;
+                    transition: margin-right 0.5s ease-out;
+                    > i {
+                        transform: rotate(360deg);
+                        transition: transform 0.8s;
+                    }
                 }
             }
-            .delay-1 {
-                animation: fading-menu 0.8s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 0.8s ease-in-out 0s forwards;
+            .starter_desc {
+                margin-top: 0px;
+                padding-left: 10px;
+                width: 100%;
+                overflow: hidden;
+                > h3 {
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                > h4 {
+                    margin: 0;
+                    font-size: 90%;
+                    font-weight: normal;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
-            .delay-2 {
-                animation: fading-menu 1s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 1s ease-in-out 0s forwards;
+            .price {
+                display: flex;
+                align-items: flex-end;
+                margin-right: 20px;
+                margin-left: auto;
+                padding-right: 10px;
+                p {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
             }
+            .coche {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80px;
+                background: $colour-tertiary;
+                color: white;
+                margin-right: -90px;
+            }
+        }
+        .delay-1 {
+            animation: fading-menu 0.8s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 0.8s ease-in-out 0s forwards;
+        }
+        .delay-2 {
+            animation: fading-menu 1s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 1s ease-in-out 0s forwards;
         }
     }
     .dish {
@@ -417,81 +449,80 @@ footer {
             height: 25px;
             border-bottom: 3px solid $colour-tertiary;
         }
-        a {
+        .dish_card {
             text-decoration: none;
             color: black;
             display: block;
-            .dish_card {
-                height: 70px;
-                overflow: hidden;
-                display: flex;
-                justify-content: space-between;
-                background-color: white;
-                border-radius: 15px;
-                margin-bottom: 20px;
-                box-shadow: 0px 3px 5px 1px $colour-shadow;
-                animation: fading-menu 1.2s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
-                &:hover {
-                    .coche {
-                        margin-right: 0;
-                        transition: margin-right 0.5s ease-out;
-                        > i {
-                            transform: rotate(360deg);
-                            transition: transform 0.8s;
-                        }
-                    }
-                }
-                .dish_desc {
-                    margin-top: 0px;
-                    padding-left: 10px;
-                    width: 100%;
-                    overflow: hidden;
-                    > h3 {
-                        margin-top: 10px;
-                        margin-bottom: 15px;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                    }
-                    > h4 {
-                        margin: 0;
-                        font-size: 90%;
-                        font-weight: normal;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-                }
-                .price {
-                    display: flex;
-                    align-items: flex-end;
-                    margin-right: 20px;
-                    margin-left: auto;
-                    padding-right: 10px;
-                    p {
-                        font-weight: bold;
-                        margin-bottom: 5px;
-                    }
-                }
+            cursor: pointer;
+            height: 70px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0px 3px 5px 1px $colour-shadow;
+            animation: fading-menu 1.2s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
+            &:hover {
                 .coche {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 80px;
-                    background: darken($colour-tertiary , 10%);
-                    color: white;
-                    margin-right: -90px;
+                    margin-right: 0;
+                    transition: margin-right 0.5s ease-out;
+                    > i {
+                        transform: rotate(360deg);
+                        transition: transform 0.8s;
+                    }
                 }
             }
-            .delay-1 {
-                animation: fading-menu 1.4s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
+            .dish_desc {
+                margin-top: 0px;
+                padding-left: 10px;
+                width: 100%;
+                overflow: hidden;
+                > h3 {
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                > h4 {
+                    margin: 0;
+                    font-size: 90%;
+                    font-weight: normal;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
-            .delay-2 {
-                animation: fading-menu 1.6s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 1.6s ease-in-out 0s forwards;
+            .price {
+                display: flex;
+                align-items: flex-end;
+                margin-right: 20px;
+                margin-left: auto;
+                padding-right: 10px;
+                p {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
             }
+            .coche {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80px;
+                background: darken($colour-tertiary , 10%);
+                color: white;
+                margin-right: -90px;
+            }
+        }
+        .delay-1 {
+            animation: fading-menu 1.4s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
+        }
+        .delay-2 {
+            animation: fading-menu 1.6s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 1.6s ease-in-out 0s forwards;
         }
     }
     .dessert {
@@ -503,81 +534,80 @@ footer {
             height: 25px;
             border-bottom: 3px solid $colour-tertiary;
         }
-        a {
+        .dessert_card {
             text-decoration: none;
             color: black;
             display: block;
-            .dessert_card {
-                height: 70px;
-                overflow: hidden;
-                display: flex;
-                justify-content: space-between;
-                background-color: white;
-                border-radius: 15px;
-                margin-bottom: 20px;
-                box-shadow: 0px 3px 5px 1px $colour-shadow;
-                animation: fading-menu 1.8s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
-                &:hover {
-                    .coche {
-                        margin-right: 0;
-                        transition: margin-right 0.5s ease-out;
-                        > i {
-                            transform: rotate(360deg);
-                            transition: transform 0.8s;
-                        }
-                    }
-                }
-                .dessert_desc {
-                    margin-top: 0px;
-                    padding-left: 10px;
-                    width: 100%;
-                    overflow: hidden;
-                    > h3 {
-                        margin-top: 10px;
-                        margin-bottom: 15px;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                    }
-                    > h4 {
-                        margin: 0;
-                        font-size: 90%;
-                        font-weight: normal;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-                }
-                .price {
-                    display: flex;
-                    align-items: flex-end;
-                    margin-right: 20px;
-                    margin-left: auto;
-                    padding-right: 10px;
-                    p {
-                        font-weight: bold;
-                        margin-bottom: 5px;
-                    }
-                }
+            cursor: pointer;
+            height: 70px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0px 3px 5px 1px $colour-shadow;
+            animation: fading-menu 1.8s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
+            &:hover {
                 .coche {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 80px;
-                    background: darken($colour-tertiary , 10%);
-                    color: white;
-                    margin-right: -90px;
+                    margin-right: 0;
+                    transition: margin-right 0.5s ease-out;
+                    > i {
+                        transform: rotate(360deg);
+                        transition: transform 0.8s;
+                    }
                 }
             }
-            .delay-1 {
-                animation: fading-menu 2s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
+            .dessert_desc {
+                margin-top: 0px;
+                padding-left: 10px;
+                width: 100%;
+                overflow: hidden;
+                > h3 {
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                > h4 {
+                    margin: 0;
+                    font-size: 90%;
+                    font-weight: normal;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
-            .delay-2 {
-                animation: fading-menu 2.2s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 2.2s ease-in-out 0s forwards;
+            .price {
+                display: flex;
+                align-items: flex-end;
+                margin-right: 20px;
+                margin-left: auto;
+                padding-right: 10px;
+                p {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
             }
+            .coche {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80px;
+                background: darken($colour-tertiary , 10%);
+                color: white;
+                margin-right: -90px;
+            }
+        }
+        .delay-1 {
+            animation: fading-menu 2s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
+        }
+        .delay-2 {
+            animation: fading-menu 2.2s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 2.2s ease-in-out 0s forwards;
         }
     }
     > form {
@@ -651,85 +681,84 @@ footer {
             height: 25px;
             border-bottom: 3px solid $colour-tertiary;
         }
-        a {
+        .starter_card {
             text-decoration: none;
             color: black;
             display: block;
-            .starter_card {
-                height: 70px;
-                background-color: white;
-                border-radius: 15px;
-                margin-bottom: 20px;
-                overflow: hidden;
-                display: flex;
-                justify-content: space-between;
-                box-shadow: 0px 3px 5px 1px $colour-shadow;
-                animation: fading-menu 0.6s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
-                &:hover {
-                    .coche {
-                        margin-right: 0;
-                        transition: margin-right 0.5s ease-out;
-                        > i {
-                            transform: rotate(360deg);
-                            transition: transform 0.8s;
-                        }
-                    }
-                }
-                .starter_desc {
-                    margin-top: 0px;
-                    padding-left: 10px;
-                    width: 100%;
-                    overflow: hidden;
-                    > h3 {
-                        margin-top: 10px;
-                        margin-bottom: 15px;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                    }
-                    > h4 {
-                        margin: 0;
-                        font-size: 90%;
-                        font-weight: normal;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-                }
-                .price {
-                    display: flex;
-                    align-items: flex-end;
-                    margin-right: 20px;
-                    margin-left: auto;
-                    padding-right: 10px;
-                    p {
-                        font-weight: bold;
-                        margin-bottom: 5px;
-                    }
-                }
+            cursor: pointer;
+            height: 70px;
+            background-color: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0px 3px 5px 1px $colour-shadow;
+            animation: fading-menu 0.6s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
+            &:hover {
                 .coche {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 80px;
-                    background: darken($colour-tertiary , 10%);
-                    color: white;
-                    margin-right: -90px;
+                    margin-right: 0;
+                    transition: margin-right 0.5s ease-out;
+                    > i {
+                        transform: rotate(360deg);
+                        transition: transform 0.8s;
+                    }
                 }
             }
-            .delay-1 {
-                animation: fading-menu 0.8s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 0.8s ease-in-out 0s forwards;
+            .starter_desc {
+                margin-top: 0px;
+                padding-left: 10px;
+                width: 100%;
+                overflow: hidden;
+                > h3 {
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                > h4 {
+                    margin: 0;
+                    font-size: 90%;
+                    font-weight: normal;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
-            .delay-2 {
-                animation: fading-menu 1s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 1s ease-in-out 0s forwards;
+            .price {
+                display: flex;
+                align-items: flex-end;
+                margin-right: 20px;
+                margin-left: auto;
+                padding-right: 10px;
+                p {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
             }
-            .delay-3 {
-                animation: fading-menu 1.2s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
+            .coche {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80px;
+                background: darken($colour-tertiary , 10%);
+                color: white;
+                margin-right: -90px;
             }
+        }
+        .delay-1 {
+            animation: fading-menu 0.8s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 0.8s ease-in-out 0s forwards;
+        }
+        .delay-2 {
+            animation: fading-menu 1s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 1s ease-in-out 0s forwards;
+        }
+        .delay-3 {
+            animation: fading-menu 1.2s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
         }
     }
     .dish {
@@ -741,81 +770,80 @@ footer {
             height: 25px;
             border-bottom: 3px solid $colour-tertiary;
         }
-        a {
+        .dish_card {
             text-decoration: none;
             color: black;
             display: block;
-            .dish_card {
-                height: 70px;
-                overflow: hidden;
-                display: flex;
-                justify-content: space-between;
-                background-color: white;
-                border-radius: 15px;
-                margin-bottom: 20px;
-                box-shadow: 0px 3px 5px 1px $colour-shadow;
-                animation: fading-menu 1.4s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
-                &:hover {
-                    .coche {
-                        margin-right: 0;
-                        transition: margin-right 0.5s ease-out;
-                        > i {
-                            transform: rotate(360deg);
-                            transition: transform 0.8s;
-                        }
-                    }
-                }
-                .dish_desc {
-                    margin-top: 0px;
-                    padding-left: 10px;
-                    width: 100%;
-                    overflow: hidden;
-                    > h3 {
-                        margin-top: 10px;
-                        margin-bottom: 15px;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                    }
-                    > h4 {
-                        margin: 0;
-                        font-size: 90%;
-                        font-weight: normal;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-                }
-                .price {
-                    display: flex;
-                    align-items: flex-end;
-                    margin-right: 20px;
-                    margin-left: auto;
-                    padding-right: 10px;
-                    p {
-                        font-weight: bold;
-                        margin-bottom: 5px;
-                    }
-                }
+            cursor: pointer;
+            height: 70px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0px 3px 5px 1px $colour-shadow;
+            animation: fading-menu 1.4s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
+            &:hover {
                 .coche {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 80px;
-                    background: darken($colour-tertiary , 10%);
-                    color: white;
-                    margin-right: -90px;
+                    margin-right: 0;
+                    transition: margin-right 0.5s ease-out;
+                    > i {
+                        transform: rotate(360deg);
+                        transition: transform 0.8s;
+                    }
                 }
             }
-            .delay-1 {
-                animation: fading-menu 1.6s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 1.6s ease-in-out 0s forwards;
+            .dish_desc {
+                margin-top: 0px;
+                padding-left: 10px;
+                width: 100%;
+                overflow: hidden;
+                > h3 {
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                > h4 {
+                    margin: 0;
+                    font-size: 90%;
+                    font-weight: normal;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
-            .delay-2 {
-                animation: fading-menu 1.8s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
+            .price {
+                display: flex;
+                align-items: flex-end;
+                margin-right: 20px;
+                margin-left: auto;
+                padding-right: 10px;
+                p {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
             }
+            .coche {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80px;
+                background: darken($colour-tertiary , 10%);
+                color: white;
+                margin-right: -90px;
+            }
+        }
+        .delay-1 {
+            animation: fading-menu 1.6s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 1.6s ease-in-out 0s forwards;
+        }
+        .delay-2 {
+            animation: fading-menu 1.8s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
         }
     }
     .dessert {
@@ -827,81 +855,80 @@ footer {
             height: 25px;
             border-bottom: 3px solid $colour-tertiary;
         }
-        a {
+        .dessert_card {
             text-decoration: none;
             color: black;
             display: block;
-            .dessert_card {
-                height: 70px;
-                overflow: hidden;
-                display: flex;
-                justify-content: space-between;
-                background-color: white;
-                border-radius: 15px;
-                margin-bottom: 20px;
-                box-shadow: 0px 3px 5px 1px $colour-shadow;
-                animation: fading-menu 2s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
-                &:hover {
-                    .coche {
-                        margin-right: 0;
-                        transition: margin-right 0.5s ease-out;
-                        > i {
-                            transform: rotate(360deg);
-                            transition: transform 0.8s;
-                        }
-                    }
-                }
-                .dessert_desc {
-                    margin-top: 0px;
-                    padding-left: 10px;
-                    width: 100%;
-                    overflow: hidden;
-                    > h3 {
-                        margin-top: 10px;
-                        margin-bottom: 15px;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                    }
-                    > h4 {
-                        margin: 0;
-                        font-size: 90%;
-                        font-weight: normal;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-                }
-                .price {
-                    display: flex;
-                    align-items: flex-end;
-                    margin-right: 20px;
-                    margin-left: auto;
-                    padding-right: 10px;
-                    p {
-                        font-weight: bold;
-                        margin-bottom: 5px;
-                    }
-                }
+            cursor: pointer;
+            height: 70px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0px 3px 5px 1px $colour-shadow;
+            animation: fading-menu 2s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
+            &:hover {
                 .coche {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 80px;
-                    background: darken($colour-tertiary , 10%);
-                    color: white;
-                    margin-right: -90px;
+                    margin-right: 0;
+                    transition: margin-right 0.5s ease-out;
+                    > i {
+                        transform: rotate(360deg);
+                        transition: transform 0.8s;
+                    }
                 }
             }
-            .delay-1 {
-                animation: fading-menu 2.2s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 2.2s ease-in-out 0s forwards;
+            .dessert_desc {
+                margin-top: 0px;
+                padding-left: 10px;
+                width: 100%;
+                overflow: hidden;
+                > h3 {
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                > h4 {
+                    margin: 0;
+                    font-size: 90%;
+                    font-weight: normal;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
-            .delay-2 {
-                animation: fading-menu 2.4s ease-in-out 0s forwards;
-                -webkit-animation: fading-menu 2.4s ease-in-out 0s forwards;
+            .price {
+                display: flex;
+                align-items: flex-end;
+                margin-right: 20px;
+                margin-left: auto;
+                padding-right: 10px;
+                p {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
             }
+            .coche {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80px;
+                background: $colour-tertiary;
+                color: white;
+                margin-right: -90px;
+            }
+        }
+        .delay-1 {
+            animation: fading-menu 2.2s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 2.2s ease-in-out 0s forwards;
+        }
+        .delay-2 {
+            animation: fading-menu 2.4s ease-in-out 0s forwards;
+            -webkit-animation: fading-menu 2.4s ease-in-out 0s forwards;
         }
     }
     > form {
