@@ -7,6 +7,12 @@
     border-bottom: 1px solid #d3d3d3;
     img {
         width: 175px;
+        @include desktop {
+            width: 220px;
+        }
+    }
+    @include desktop {
+        height: 85px;
     }
 }
 
@@ -24,6 +30,10 @@
     p {
         position: relative;
         right: 10px;
+    }
+    @include desktop {
+        height: 70px;
+        font-size: 120%;
     }
 
 }
@@ -48,6 +58,9 @@
         padding-left: 25px;
         padding-right: 25px;
         margin-bottom: 30px;
+        @include desktop {
+            font-size: 110%;
+        }
     }
 }
 

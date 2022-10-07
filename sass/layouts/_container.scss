@@ -21,6 +21,9 @@
     p {
         font-family: $shrik;
         text-align: center;
+        @include desktop {
+            font-size: 130%;
+        }
     }
     .lds-ellipsis {
         display: inline-block;
@@ -95,6 +98,9 @@
     padding-right: 20px;
     height: 350px;
     font-family: $roboto-bold;
+    @include desktop {
+        height: 175px;
+    }
     h2 {
         font-size: 140%;
         margin-bottom: 30px;
@@ -106,6 +112,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            max-width: 100%;
+        }
+        @include desktop {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
         }
         li {   
             height: 60px; 
@@ -114,10 +126,14 @@
             box-shadow: 0px 3px 5px 1px $colour-shadow; 
             margin-bottom: 25px;
             display: flex;
-            align-items: center;  
+            align-items: center;
             @include tablette {
                 width: 500px;
-            }     
+            }   
+            @include desktop {
+                width: 30%;
+                max-width: 400px;
+            }  
             i {
                 color: #828282;
                 width: 15%;
@@ -155,10 +171,20 @@
     @include tablette {
         height: 1830px;
     }
+    @include desktop {
+        height: 1050px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
     h2 {
         padding-left: 20px;
         font-family: $roboto-bold;
         font-size: 140%;
+        @include desktop {
+            width: 100%;
+            margin-bottom: 0;
+        }
     }
     a {
         text-decoration: none;
@@ -166,6 +192,10 @@
         display: block;
         margin-left: 20px;
         margin-right: 20px;
+        @include desktop {
+            width: 45%;
+            height: 38%;
+        }
         .card {
             display: flex;
             flex-direction: column;
@@ -262,10 +292,16 @@ footer {
     flex-direction: column;
     font-family: $roboto;
     @include tablette {
-        height: 210px;
+        height: 215px;
         align-items: center;
         font-size: 110%;
         line-height: 25px;
+    }
+    @include desktop {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        height: 165px;
     }
     h4 {
         font-family: $shrik;
@@ -274,6 +310,14 @@ footer {
         padding-left: 20px;
         @include tablette {
             font-size: 110%;
+        }
+        @include desktop {
+            font-size: 135%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+            margin-bottom: 0;
         }
     }
     a {
@@ -302,12 +346,18 @@ footer {
     width: 100%;
     font-family: $roboto;
     height: 1515px;
+    @include desktop {
+        height: 1385px;
+    }
 }
 
 .wrapper_card2 {
     height: 1625px;
     width: 100%;
     font-family: $roboto;
+    @include desktop {
+        height: 1470px;
+    }
 }
 
 .head_pic {
@@ -317,6 +367,9 @@ footer {
         height: 100%;
         width: 100%;
         object-fit: cover;
+    }
+    @include desktop {
+        height: 450px;
     }
 }
 
@@ -330,6 +383,9 @@ footer {
     background: $colour-grey;
     position: relative;
     bottom: 70px;
+    @include desktop {
+        height: 940px;
+    }
     .menu_title {
         font-family: $shrik;
         display: flex;
@@ -355,259 +411,281 @@ footer {
             }
         }
     }
-    .starter {
-        overflow: hidden;
-        > h3 {
-            font-weight: normal;
-            font-size: 110%;
-            width: 45px;
-            height: 25px;
-            border-bottom: 3px solid $colour-tertiary;
+    .menu_org {
+        max-width: 600px;
+        @include tablette {
+            max-width: 700px;
         }
-        .starter_card {
-           text-decoration: none;
-            color: black;
-            display: block;
-            height: 70px;
-            background-color: white;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            overflow: hidden;
+        @include desktop {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            box-shadow: 0px 3px 5px 1px $colour-shadow;
-            animation: fading-menu 0.6s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
-            cursor: pointer;
-            &:hover {
-                .coche {
-                    margin-right: 0;
-                    transition: margin-right 0.5s ease-out;
-                    > i {
-                        transform: rotate(360deg);
-                        transition: transform 0.8s;
-                    }
-                }
-            }
-            .starter_desc {
-                margin-top: 0px;
-                padding-left: 10px;
-                width: 100%;
-                overflow: hidden;
-                > h3 {
-                    margin-top: 10px;
-                    margin-bottom: 15px;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                }
-                > h4 {
-                    margin: 0;
-                    font-size: 90%;
-                    font-weight: normal;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-            }
-            .price {
-                display: flex;
-                align-items: flex-end;
-                margin-right: 20px;
-                margin-left: auto;
-                padding-right: 10px;
-                p {
-                    font-weight: bold;
-                    margin-bottom: 5px;
-                }
-            }
-            .coche {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 80px;
-                background: $colour-tertiary;
-                color: white;
-                margin-right: -90px;
-            }
+            max-width: 100%;
         }
-        .delay-1 {
-            animation: fading-menu 0.8s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 0.8s ease-in-out 0s forwards;
-        }
-        .delay-2 {
-            animation: fading-menu 1s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 1s ease-in-out 0s forwards;
-        }
-    }
-    .dish {
-        overflow: hidden;
-        > h3 {
-            font-weight: normal;
-            font-size: 110%;
-            width: 45px;
-            height: 25px;
-            border-bottom: 3px solid $colour-tertiary;
-        }
-        .dish_card {
+
+        .starter {
+            overflow: hidden;
+            @include desktop {
+                width: 45%;
+            }
+            > h3 {
+                font-weight: normal;
+                font-size: 110%;
+                width: 45px;
+                height: 25px;
+                border-bottom: 3px solid $colour-tertiary;
+            }
+            .starter_card {
             text-decoration: none;
-            color: black;
-            display: block;
-            cursor: pointer;
-            height: 70px;
-            overflow: hidden;
-            display: flex;
-            justify-content: space-between;
-            background-color: white;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0px 3px 5px 1px $colour-shadow;
-            animation: fading-menu 1.2s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
-            &:hover {
-                .coche {
-                    margin-right: 0;
-                    transition: margin-right 0.5s ease-out;
-                    > i {
-                        transform: rotate(360deg);
-                        transition: transform 0.8s;
+                color: black;
+                display: block;
+                height: 70px;
+                background-color: white;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                box-shadow: 0px 3px 5px 1px $colour-shadow;
+                animation: fading-menu 0.6s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
+                cursor: pointer;
+                &:hover {
+                    .coche {
+                        margin-right: 0;
+                        transition: margin-right 0.5s ease-out;
+                        > i {
+                            transform: rotate(360deg);
+                            transition: transform 0.8s;
+                        }
                     }
                 }
-            }
-            .dish_desc {
-                margin-top: 0px;
-                padding-left: 10px;
-                width: 100%;
-                overflow: hidden;
-                > h3 {
-                    margin-top: 10px;
-                    margin-bottom: 15px;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                .starter_desc {
+                    margin-top: 0px;
+                    padding-left: 10px;
+                    width: 100%;
                     overflow: hidden;
-                }
-                > h4 {
-                    margin: 0;
-                    font-size: 90%;
-                    font-weight: normal;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-            }
-            .price {
-                display: flex;
-                align-items: flex-end;
-                margin-right: 20px;
-                margin-left: auto;
-                padding-right: 10px;
-                p {
-                    font-weight: bold;
-                    margin-bottom: 5px;
-                }
-            }
-            .coche {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 80px;
-                background: darken($colour-tertiary , 10%);
-                color: white;
-                margin-right: -90px;
-            }
-        }
-        .delay-1 {
-            animation: fading-menu 1.4s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
-        }
-        .delay-2 {
-            animation: fading-menu 1.6s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 1.6s ease-in-out 0s forwards;
-        }
-    }
-    .dessert {
-        overflow: hidden;
-        > h3 {
-            font-weight: normal;
-            font-size: 110%;
-            width: 45px;
-            height: 25px;
-            border-bottom: 3px solid $colour-tertiary;
-        }
-        .dessert_card {
-            text-decoration: none;
-            color: black;
-            display: block;
-            cursor: pointer;
-            height: 70px;
-            overflow: hidden;
-            display: flex;
-            justify-content: space-between;
-            background-color: white;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0px 3px 5px 1px $colour-shadow;
-            animation: fading-menu 1.8s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
-            &:hover {
-                .coche {
-                    margin-right: 0;
-                    transition: margin-right 0.5s ease-out;
-                    > i {
-                        transform: rotate(360deg);
-                        transition: transform 0.8s;
+                    > h3 {
+                        margin-top: 10px;
+                        margin-bottom: 15px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    > h4 {
+                        margin: 0;
+                        font-size: 90%;
+                        font-weight: normal;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
+                .price {
+                    display: flex;
+                    align-items: flex-end;
+                    margin-right: 20px;
+                    margin-left: auto;
+                    padding-right: 10px;
+                    p {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                }
+                .coche {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80px;
+                    background: $colour-tertiary;
+                    color: white;
+                    margin-right: -90px;
+                }
             }
-            .dessert_desc {
-                margin-top: 0px;
-                padding-left: 10px;
-                width: 100%;
+            .delay-1 {
+                animation: fading-menu 0.8s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 0.8s ease-in-out 0s forwards;
+            }
+            .delay-2 {
+                animation: fading-menu 1s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 1s ease-in-out 0s forwards;
+            }
+        }
+        .dish {
+            overflow: hidden;
+            @include desktop {
+                width: 45%;
+            }
+            > h3 {
+                font-weight: normal;
+                font-size: 110%;
+                width: 45px;
+                height: 25px;
+                border-bottom: 3px solid $colour-tertiary;
+            }
+            .dish_card {
+                text-decoration: none;
+                color: black;
+                display: block;
+                cursor: pointer;
+                height: 70px;
                 overflow: hidden;
-                > h3 {
-                    margin-top: 10px;
-                    margin-bottom: 15px;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                box-shadow: 0px 3px 5px 1px $colour-shadow;
+                animation: fading-menu 1.2s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
+                &:hover {
+                    .coche {
+                        margin-right: 0;
+                        transition: margin-right 0.5s ease-out;
+                        > i {
+                            transform: rotate(360deg);
+                            transition: transform 0.8s;
+                        }
+                    }
                 }
-                > h4 {
-                    margin: 0;
-                    font-size: 90%;
-                    font-weight: normal;
-                    white-space: nowrap;
+                .dish_desc {
+                    margin-top: 0px;
+                    padding-left: 10px;
+                    width: 100%;
                     overflow: hidden;
-                    text-overflow: ellipsis;
+                    > h3 {
+                        margin-top: 10px;
+                        margin-bottom: 15px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    > h4 {
+                        margin: 0;
+                        font-size: 90%;
+                        font-weight: normal;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .price {
+                    display: flex;
+                    align-items: flex-end;
+                    margin-right: 20px;
+                    margin-left: auto;
+                    padding-right: 10px;
+                    p {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                }
+                .coche {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80px;
+                    background: darken($colour-tertiary , 10%);
+                    color: white;
+                    margin-right: -90px;
                 }
             }
-            .price {
-                display: flex;
-                align-items: flex-end;
-                margin-right: 20px;
-                margin-left: auto;
-                padding-right: 10px;
-                p {
-                    font-weight: bold;
-                    margin-bottom: 5px;
-                }
+            .delay-1 {
+                animation: fading-menu 1.4s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
             }
-            .coche {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 80px;
-                background: darken($colour-tertiary , 10%);
-                color: white;
-                margin-right: -90px;
+            .delay-2 {
+                animation: fading-menu 1.6s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 1.6s ease-in-out 0s forwards;
             }
         }
-        .delay-1 {
-            animation: fading-menu 2s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
-        }
-        .delay-2 {
-            animation: fading-menu 2.2s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 2.2s ease-in-out 0s forwards;
+        .dessert {
+            overflow: hidden;
+            @include desktop {
+                width: 45%;
+            }
+            > h3 {
+                font-weight: normal;
+                font-size: 110%;
+                width: 45px;
+                height: 25px;
+                border-bottom: 3px solid $colour-tertiary;
+            }
+            .dessert_card {
+                text-decoration: none;
+                color: black;
+                display: block;
+                cursor: pointer;
+                height: 70px;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                box-shadow: 0px 3px 5px 1px $colour-shadow;
+                animation: fading-menu 1.8s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
+                &:hover {
+                    .coche {
+                        margin-right: 0;
+                        transition: margin-right 0.5s ease-out;
+                        > i {
+                            transform: rotate(360deg);
+                            transition: transform 0.8s;
+                        }
+                    }
+                }
+                .dessert_desc {
+                    margin-top: 0px;
+                    padding-left: 10px;
+                    width: 100%;
+                    overflow: hidden;
+                    > h3 {
+                        margin-top: 10px;
+                        margin-bottom: 15px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    > h4 {
+                        margin: 0;
+                        font-size: 90%;
+                        font-weight: normal;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .price {
+                    display: flex;
+                    align-items: flex-end;
+                    margin-right: 20px;
+                    margin-left: auto;
+                    padding-right: 10px;
+                    p {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                }
+                .coche {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80px;
+                    background: darken($colour-tertiary , 10%);
+                    color: white;
+                    margin-right: -90px;
+                }
+            }
+            .delay-1 {
+                animation: fading-menu 2s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
+            }
+            .delay-2 {
+                animation: fading-menu 2.2s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 2.2s ease-in-out 0s forwards;
+            }
         }
     }
     > form {
@@ -617,6 +695,11 @@ footer {
         #btn-explore {
             input {
                 width: 175px;
+                @include desktop {
+                    width: 250px;
+                    height: 55px;
+                    font-size: 130%;
+                }
             }
         }
     }      
@@ -638,7 +721,7 @@ footer {
 }
 
 .menu_longer {
-    height: 1330px;
+    height: 1335px;
     padding-left: 20px;
     padding-right: 20px;
     border-top: 1px solid $colour-grey;
@@ -647,6 +730,9 @@ footer {
     background: $colour-grey;
     position: relative;
     bottom: 70px;
+    @include desktop {
+        height: 1025px;
+    }
     .menu_title {
         font-family: $shrik;
         display: flex;
@@ -672,263 +758,284 @@ footer {
             }
         }
     }
-    .starter {
-        overflow: hidden;
-        > h3 {
-            font-weight: normal;
-            font-size: 110%;
-            width: 45px;
-            height: 25px;
-            border-bottom: 3px solid $colour-tertiary;
+    .menu_org {
+        max-width: 600px;
+        @include tablette {
+            max-width: 700px;
         }
-        .starter_card {
-            text-decoration: none;
-            color: black;
-            display: block;
-            cursor: pointer;
-            height: 70px;
-            background-color: white;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            overflow: hidden;
+        @include desktop {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            box-shadow: 0px 3px 5px 1px $colour-shadow;
-            animation: fading-menu 0.6s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
-            &:hover {
-                .coche {
-                    margin-right: 0;
-                    transition: margin-right 0.5s ease-out;
-                    > i {
-                        transform: rotate(360deg);
-                        transition: transform 0.8s;
+            max-width: 100%;
+        }
+        .starter {
+            overflow: hidden;
+            @include desktop {
+                width: 45%;
+            }
+            > h3 {
+                font-weight: normal;
+                font-size: 110%;
+                width: 45px;
+                height: 25px;
+                border-bottom: 3px solid $colour-tertiary;
+            }
+            .starter_card {
+                text-decoration: none;
+                color: black;
+                display: block;
+                cursor: pointer;
+                height: 70px;
+                background-color: white;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                box-shadow: 0px 3px 5px 1px $colour-shadow;
+                animation: fading-menu 0.6s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
+                &:hover {
+                    .coche {
+                        margin-right: 0;
+                        transition: margin-right 0.5s ease-out;
+                        > i {
+                            transform: rotate(360deg);
+                            transition: transform 0.8s;
+                        }
                     }
                 }
-            }
-            .starter_desc {
-                margin-top: 0px;
-                padding-left: 10px;
-                width: 100%;
-                overflow: hidden;
-                > h3 {
-                    margin-top: 10px;
-                    margin-bottom: 15px;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                .starter_desc {
+                    margin-top: 0px;
+                    padding-left: 10px;
+                    width: 100%;
                     overflow: hidden;
-                }
-                > h4 {
-                    margin: 0;
-                    font-size: 90%;
-                    font-weight: normal;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-            }
-            .price {
-                display: flex;
-                align-items: flex-end;
-                margin-right: 20px;
-                margin-left: auto;
-                padding-right: 10px;
-                p {
-                    font-weight: bold;
-                    margin-bottom: 5px;
-                }
-            }
-            .coche {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 80px;
-                background: darken($colour-tertiary , 10%);
-                color: white;
-                margin-right: -90px;
-            }
-        }
-        .delay-1 {
-            animation: fading-menu 0.8s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 0.8s ease-in-out 0s forwards;
-        }
-        .delay-2 {
-            animation: fading-menu 1s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 1s ease-in-out 0s forwards;
-        }
-        .delay-3 {
-            animation: fading-menu 1.2s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
-        }
-    }
-    .dish {
-        overflow: hidden;
-        > h3 {
-            font-weight: normal;
-            font-size: 110%;
-            width: 45px;
-            height: 25px;
-            border-bottom: 3px solid $colour-tertiary;
-        }
-        .dish_card {
-            text-decoration: none;
-            color: black;
-            display: block;
-            cursor: pointer;
-            height: 70px;
-            overflow: hidden;
-            display: flex;
-            justify-content: space-between;
-            background-color: white;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0px 3px 5px 1px $colour-shadow;
-            animation: fading-menu 1.4s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
-            &:hover {
-                .coche {
-                    margin-right: 0;
-                    transition: margin-right 0.5s ease-out;
-                    > i {
-                        transform: rotate(360deg);
-                        transition: transform 0.8s;
+                    > h3 {
+                        margin-top: 10px;
+                        margin-bottom: 15px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    > h4 {
+                        margin: 0;
+                        font-size: 90%;
+                        font-weight: normal;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
-            }
-            .dish_desc {
-                margin-top: 0px;
-                padding-left: 10px;
-                width: 100%;
-                overflow: hidden;
-                > h3 {
-                    margin-top: 10px;
-                    margin-bottom: 15px;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                }
-                > h4 {
-                    margin: 0;
-                    font-size: 90%;
-                    font-weight: normal;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-            }
-            .price {
-                display: flex;
-                align-items: flex-end;
-                margin-right: 20px;
-                margin-left: auto;
-                padding-right: 10px;
-                p {
-                    font-weight: bold;
-                    margin-bottom: 5px;
-                }
-            }
-            .coche {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 80px;
-                background: darken($colour-tertiary , 10%);
-                color: white;
-                margin-right: -90px;
-            }
-        }
-        .delay-1 {
-            animation: fading-menu 1.6s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 1.6s ease-in-out 0s forwards;
-        }
-        .delay-2 {
-            animation: fading-menu 1.8s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
-        }
-    }
-    .dessert {
-        overflow: hidden;
-        > h3 {
-            font-weight: normal;
-            font-size: 110%;
-            width: 45px;
-            height: 25px;
-            border-bottom: 3px solid $colour-tertiary;
-        }
-        .dessert_card {
-            text-decoration: none;
-            color: black;
-            display: block;
-            cursor: pointer;
-            height: 70px;
-            overflow: hidden;
-            display: flex;
-            justify-content: space-between;
-            background-color: white;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0px 3px 5px 1px $colour-shadow;
-            animation: fading-menu 2s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
-            &:hover {
-                .coche {
-                    margin-right: 0;
-                    transition: margin-right 0.5s ease-out;
-                    > i {
-                        transform: rotate(360deg);
-                        transition: transform 0.8s;
+                .price {
+                    display: flex;
+                    align-items: flex-end;
+                    margin-right: 20px;
+                    margin-left: auto;
+                    padding-right: 10px;
+                    p {
+                        font-weight: bold;
+                        margin-bottom: 5px;
                     }
                 }
+                .coche {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80px;
+                    background: darken($colour-tertiary , 10%);
+                    color: white;
+                    margin-right: -90px;
+                }
             }
-            .dessert_desc {
-                margin-top: 0px;
-                padding-left: 10px;
-                width: 100%;
+            .delay-1 {
+                animation: fading-menu 0.8s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 0.8s ease-in-out 0s forwards;
+            }
+            .delay-2 {
+                animation: fading-menu 1s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 1s ease-in-out 0s forwards;
+            }
+            .delay-3 {
+                animation: fading-menu 1.2s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
+            }
+        }
+        .dish {
+            overflow: hidden;
+            @include desktop {
+                width: 45%;
+            }
+            > h3 {
+                font-weight: normal;
+                font-size: 110%;
+                width: 45px;
+                height: 25px;
+                border-bottom: 3px solid $colour-tertiary;
+            }
+            .dish_card {
+                text-decoration: none;
+                color: black;
+                display: block;
+                cursor: pointer;
+                height: 70px;
                 overflow: hidden;
-                > h3 {
-                    margin-top: 10px;
-                    margin-bottom: 15px;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                box-shadow: 0px 3px 5px 1px $colour-shadow;
+                animation: fading-menu 1.4s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
+                &:hover {
+                    .coche {
+                        margin-right: 0;
+                        transition: margin-right 0.5s ease-out;
+                        > i {
+                            transform: rotate(360deg);
+                            transition: transform 0.8s;
+                        }
+                    }
                 }
-                > h4 {
-                    margin: 0;
-                    font-size: 90%;
-                    font-weight: normal;
-                    white-space: nowrap;
+                .dish_desc {
+                    margin-top: 0px;
+                    padding-left: 10px;
+                    width: 100%;
                     overflow: hidden;
-                    text-overflow: ellipsis;
+                    > h3 {
+                        margin-top: 10px;
+                        margin-bottom: 15px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    > h4 {
+                        margin: 0;
+                        font-size: 90%;
+                        font-weight: normal;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .price {
+                    display: flex;
+                    align-items: flex-end;
+                    margin-right: 20px;
+                    margin-left: auto;
+                    padding-right: 10px;
+                    p {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                }
+                .coche {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80px;
+                    background: darken($colour-tertiary , 10%);
+                    color: white;
+                    margin-right: -90px;
                 }
             }
-            .price {
-                display: flex;
-                align-items: flex-end;
-                margin-right: 20px;
-                margin-left: auto;
-                padding-right: 10px;
-                p {
-                    font-weight: bold;
-                    margin-bottom: 5px;
-                }
+            .delay-1 {
+                animation: fading-menu 1.6s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 1.6s ease-in-out 0s forwards;
             }
-            .coche {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 80px;
-                background: $colour-tertiary;
-                color: white;
-                margin-right: -90px;
+            .delay-2 {
+                animation: fading-menu 1.8s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
             }
         }
-        .delay-1 {
-            animation: fading-menu 2.2s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 2.2s ease-in-out 0s forwards;
-        }
-        .delay-2 {
-            animation: fading-menu 2.4s ease-in-out 0s forwards;
-            -webkit-animation: fading-menu 2.4s ease-in-out 0s forwards;
+        .dessert {
+            overflow: hidden;
+            @include desktop {
+                width: 45%;
+            }
+            > h3 {
+                font-weight: normal;
+                font-size: 110%;
+                width: 45px;
+                height: 25px;
+                border-bottom: 3px solid $colour-tertiary;
+            }
+            .dessert_card {
+                text-decoration: none;
+                color: black;
+                display: block;
+                cursor: pointer;
+                height: 70px;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                box-shadow: 0px 3px 5px 1px $colour-shadow;
+                animation: fading-menu 2s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
+                &:hover {
+                    .coche {
+                        margin-right: 0;
+                        transition: margin-right 0.5s ease-out;
+                        > i {
+                            transform: rotate(360deg);
+                            transition: transform 0.8s;
+                        }
+                    }
+                }
+                .dessert_desc {
+                    margin-top: 0px;
+                    padding-left: 10px;
+                    width: 100%;
+                    overflow: hidden;
+                    > h3 {
+                        margin-top: 10px;
+                        margin-bottom: 15px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    > h4 {
+                        margin: 0;
+                        font-size: 90%;
+                        font-weight: normal;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .price {
+                    display: flex;
+                    align-items: flex-end;
+                    margin-right: 20px;
+                    margin-left: auto;
+                    padding-right: 10px;
+                    p {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                }
+                .coche {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80px;
+                    background: $colour-tertiary;
+                    color: white;
+                    margin-right: -90px;
+                }
+            }
+            .delay-1 {
+                animation: fading-menu 2.2s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 2.2s ease-in-out 0s forwards;
+            }
+            .delay-2 {
+                animation: fading-menu 2.4s ease-in-out 0s forwards;
+                -webkit-animation: fading-menu 2.4s ease-in-out 0s forwards;
+            }
         }
     }
     > form {
@@ -938,6 +1045,11 @@ footer {
         #btn-explore {
             input {
                 width: 175px;
+                @include desktop {
+                    width: 250px;
+                    height: 55px;
+                    font-size: 130%;
+                }
             }
         }
     }

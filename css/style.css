@@ -19,8 +19,14 @@
   box-shadow: 0px 3px 5px 1px #d3d3d3;
   padding-left: 20px;
   padding-right: 20px;
-  z-index: 1;
   cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+  #btn-explore input {
+    width: 270px;
+    height: 55px;
+    font-size: 120%;
+  }
 }
 #btn-explore input:hover {
   filter: brightness(1.1);
@@ -40,6 +46,16 @@
 .logo img {
   width: 175px;
 }
+@media screen and (min-width: 992px) {
+  .logo img {
+    width: 220px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .logo {
+    height: 85px;
+  }
+}
 
 #localize {
   height: 50px;
@@ -56,6 +72,12 @@
 #localize p {
   position: relative;
   right: 10px;
+}
+@media screen and (min-width: 992px) {
+  #localize {
+    height: 70px;
+    font-size: 120%;
+  }
 }
 
 #reserve {
@@ -79,6 +101,11 @@
   padding-left: 25px;
   padding-right: 25px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 992px) {
+  #reserve p {
+    font-size: 110%;
+  }
 }
 
 .logo a {
@@ -112,6 +139,11 @@
 #loader_wrapper p {
   font-family: "Shrikhand", serif;
   text-align: center;
+}
+@media screen and (min-width: 992px) {
+  #loader_wrapper p {
+    font-size: 130%;
+  }
 }
 #loader_wrapper .lds-ellipsis {
   display: inline-block;
@@ -184,6 +216,11 @@
   height: 350px;
   font-family: "Roboto-bold", serif;
 }
+@media screen and (min-width: 992px) {
+  #fonctionnement {
+    height: 175px;
+  }
+}
 #fonctionnement h2 {
   font-size: 140%;
   margin-bottom: 30px;
@@ -197,6 +234,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #fonctionnement ol {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
   }
 }
 #fonctionnement ol li {
@@ -211,6 +256,12 @@
 @media screen and (min-width: 768px) {
   #fonctionnement ol li {
     width: 500px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #fonctionnement ol li {
+    width: 30%;
+    max-width: 400px;
   }
 }
 #fonctionnement ol li i {
@@ -250,10 +301,24 @@
     height: 1830px;
   }
 }
+@media screen and (min-width: 992px) {
+  #restaurants {
+    height: 1050px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
 #restaurants h2 {
   padding-left: 20px;
   font-family: "Roboto-bold", serif;
   font-size: 140%;
+}
+@media screen and (min-width: 992px) {
+  #restaurants h2 {
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 #restaurants a {
   text-decoration: none;
@@ -261,6 +326,12 @@
   display: block;
   margin-left: 20px;
   margin-right: 20px;
+}
+@media screen and (min-width: 992px) {
+  #restaurants a {
+    width: 45%;
+    height: 38%;
+  }
 }
 #restaurants a .card {
   display: flex;
@@ -364,10 +435,18 @@ footer {
 }
 @media screen and (min-width: 768px) {
   footer {
-    height: 210px;
+    height: 215px;
     align-items: center;
     font-size: 110%;
     line-height: 25px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 165px;
   }
 }
 footer h4 {
@@ -379,6 +458,16 @@ footer h4 {
 @media screen and (min-width: 768px) {
   footer h4 {
     font-size: 110%;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer h4 {
+    font-size: 135%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 0;
   }
 }
 footer a {
@@ -405,11 +494,21 @@ footer p {
   font-family: "Roboto", serif;
   height: 1515px;
 }
+@media screen and (min-width: 992px) {
+  .wrapper_card {
+    height: 1385px;
+  }
+}
 
 .wrapper_card2 {
   height: 1625px;
   width: 100%;
   font-family: "Roboto", serif;
+}
+@media screen and (min-width: 992px) {
+  .wrapper_card2 {
+    height: 1470px;
+  }
 }
 
 .head_pic {
@@ -420,6 +519,11 @@ footer p {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+@media screen and (min-width: 992px) {
+  .head_pic {
+    height: 450px;
+  }
 }
 
 .menu {
@@ -432,6 +536,11 @@ footer p {
   background: #f6f6f6;
   position: relative;
   bottom: 70px;
+}
+@media screen and (min-width: 992px) {
+  .menu {
+    height: 940px;
+  }
 }
 .menu .menu_title {
   font-family: "Shrikhand", serif;
@@ -458,17 +567,38 @@ footer p {
   -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
-.menu .starter {
+.menu .menu_org {
+  max-width: 600px;
+}
+@media screen and (min-width: 768px) {
+  .menu .menu_org {
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu .menu_org {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+}
+.menu .menu_org .starter {
   overflow: hidden;
 }
-.menu .starter > h3 {
+@media screen and (min-width: 992px) {
+  .menu .menu_org .starter {
+    width: 45%;
+  }
+}
+.menu .menu_org .starter > h3 {
   font-weight: normal;
   font-size: 110%;
   width: 45px;
   height: 25px;
   border-bottom: 3px solid #99E2D0;
 }
-.menu .starter .starter_card {
+.menu .menu_org .starter .starter_card {
   text-decoration: none;
   color: black;
   display: block;
@@ -484,28 +614,28 @@ footer p {
   -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
   cursor: pointer;
 }
-.menu .starter .starter_card:hover .coche {
+.menu .menu_org .starter .starter_card:hover .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu .starter .starter_card:hover .coche > i {
+.menu .menu_org .starter .starter_card:hover .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
 }
-.menu .starter .starter_card .starter_desc {
+.menu .menu_org .starter .starter_card .starter_desc {
   margin-top: 0px;
   padding-left: 10px;
   width: 100%;
   overflow: hidden;
 }
-.menu .starter .starter_card .starter_desc > h3 {
+.menu .menu_org .starter .starter_card .starter_desc > h3 {
   margin-top: 10px;
   margin-bottom: 15px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu .starter .starter_card .starter_desc > h4 {
+.menu .menu_org .starter .starter_card .starter_desc > h4 {
   margin: 0;
   font-size: 90%;
   font-weight: normal;
@@ -513,18 +643,18 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu .starter .starter_card .price {
+.menu .menu_org .starter .starter_card .price {
   display: flex;
   align-items: flex-end;
   margin-right: 20px;
   margin-left: auto;
   padding-right: 10px;
 }
-.menu .starter .starter_card .price p {
+.menu .menu_org .starter .starter_card .price p {
   font-weight: bold;
   margin-bottom: 5px;
 }
-.menu .starter .starter_card .coche {
+.menu .menu_org .starter .starter_card .coche {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -533,25 +663,30 @@ footer p {
   color: white;
   margin-right: -90px;
 }
-.menu .starter .delay-1 {
+.menu .menu_org .starter .delay-1 {
   animation: fading-menu 0.8s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 0.8s ease-in-out 0s forwards;
 }
-.menu .starter .delay-2 {
+.menu .menu_org .starter .delay-2 {
   animation: fading-menu 1s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1s ease-in-out 0s forwards;
 }
-.menu .dish {
+.menu .menu_org .dish {
   overflow: hidden;
 }
-.menu .dish > h3 {
+@media screen and (min-width: 992px) {
+  .menu .menu_org .dish {
+    width: 45%;
+  }
+}
+.menu .menu_org .dish > h3 {
   font-weight: normal;
   font-size: 110%;
   width: 45px;
   height: 25px;
   border-bottom: 3px solid #99E2D0;
 }
-.menu .dish .dish_card {
+.menu .menu_org .dish .dish_card {
   text-decoration: none;
   color: black;
   display: block;
@@ -567,28 +702,28 @@ footer p {
   animation: fading-menu 1.2s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
 }
-.menu .dish .dish_card:hover .coche {
+.menu .menu_org .dish .dish_card:hover .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu .dish .dish_card:hover .coche > i {
+.menu .menu_org .dish .dish_card:hover .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
 }
-.menu .dish .dish_card .dish_desc {
+.menu .menu_org .dish .dish_card .dish_desc {
   margin-top: 0px;
   padding-left: 10px;
   width: 100%;
   overflow: hidden;
 }
-.menu .dish .dish_card .dish_desc > h3 {
+.menu .menu_org .dish .dish_card .dish_desc > h3 {
   margin-top: 10px;
   margin-bottom: 15px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu .dish .dish_card .dish_desc > h4 {
+.menu .menu_org .dish .dish_card .dish_desc > h4 {
   margin: 0;
   font-size: 90%;
   font-weight: normal;
@@ -596,18 +731,18 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu .dish .dish_card .price {
+.menu .menu_org .dish .dish_card .price {
   display: flex;
   align-items: flex-end;
   margin-right: 20px;
   margin-left: auto;
   padding-right: 10px;
 }
-.menu .dish .dish_card .price p {
+.menu .menu_org .dish .dish_card .price p {
   font-weight: bold;
   margin-bottom: 5px;
 }
-.menu .dish .dish_card .coche {
+.menu .menu_org .dish .dish_card .coche {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -616,25 +751,30 @@ footer p {
   color: white;
   margin-right: -90px;
 }
-.menu .dish .delay-1 {
+.menu .menu_org .dish .delay-1 {
   animation: fading-menu 1.4s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
 }
-.menu .dish .delay-2 {
+.menu .menu_org .dish .delay-2 {
   animation: fading-menu 1.6s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.6s ease-in-out 0s forwards;
 }
-.menu .dessert {
+.menu .menu_org .dessert {
   overflow: hidden;
 }
-.menu .dessert > h3 {
+@media screen and (min-width: 992px) {
+  .menu .menu_org .dessert {
+    width: 45%;
+  }
+}
+.menu .menu_org .dessert > h3 {
   font-weight: normal;
   font-size: 110%;
   width: 45px;
   height: 25px;
   border-bottom: 3px solid #99E2D0;
 }
-.menu .dessert .dessert_card {
+.menu .menu_org .dessert .dessert_card {
   text-decoration: none;
   color: black;
   display: block;
@@ -650,28 +790,28 @@ footer p {
   animation: fading-menu 1.8s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
 }
-.menu .dessert .dessert_card:hover .coche {
+.menu .menu_org .dessert .dessert_card:hover .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu .dessert .dessert_card:hover .coche > i {
+.menu .menu_org .dessert .dessert_card:hover .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
 }
-.menu .dessert .dessert_card .dessert_desc {
+.menu .menu_org .dessert .dessert_card .dessert_desc {
   margin-top: 0px;
   padding-left: 10px;
   width: 100%;
   overflow: hidden;
 }
-.menu .dessert .dessert_card .dessert_desc > h3 {
+.menu .menu_org .dessert .dessert_card .dessert_desc > h3 {
   margin-top: 10px;
   margin-bottom: 15px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu .dessert .dessert_card .dessert_desc > h4 {
+.menu .menu_org .dessert .dessert_card .dessert_desc > h4 {
   margin: 0;
   font-size: 90%;
   font-weight: normal;
@@ -679,18 +819,18 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu .dessert .dessert_card .price {
+.menu .menu_org .dessert .dessert_card .price {
   display: flex;
   align-items: flex-end;
   margin-right: 20px;
   margin-left: auto;
   padding-right: 10px;
 }
-.menu .dessert .dessert_card .price p {
+.menu .menu_org .dessert .dessert_card .price p {
   font-weight: bold;
   margin-bottom: 5px;
 }
-.menu .dessert .dessert_card .coche {
+.menu .menu_org .dessert .dessert_card .coche {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -699,11 +839,11 @@ footer p {
   color: white;
   margin-right: -90px;
 }
-.menu .dessert .delay-1 {
+.menu .menu_org .dessert .delay-1 {
   animation: fading-menu 2s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
 }
-.menu .dessert .delay-2 {
+.menu .menu_org .dessert .delay-2 {
   animation: fading-menu 2.2s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 2.2s ease-in-out 0s forwards;
 }
@@ -714,6 +854,13 @@ footer p {
 }
 .menu > form #btn-explore input {
   width: 175px;
+}
+@media screen and (min-width: 992px) {
+  .menu > form #btn-explore input {
+    width: 250px;
+    height: 55px;
+    font-size: 130%;
+  }
 }
 
 @keyframes fading-menu {
@@ -728,7 +875,7 @@ footer p {
 }
 @keyframes coche-anim {}
 .menu_longer {
-  height: 1330px;
+  height: 1335px;
   padding-left: 20px;
   padding-right: 20px;
   border-top: 1px solid #f6f6f6;
@@ -737,6 +884,11 @@ footer p {
   background: #f6f6f6;
   position: relative;
   bottom: 70px;
+}
+@media screen and (min-width: 992px) {
+  .menu_longer {
+    height: 1025px;
+  }
 }
 .menu_longer .menu_title {
   font-family: "Shrikhand", serif;
@@ -763,17 +915,38 @@ footer p {
   -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
-.menu_longer .starter {
+.menu_longer .menu_org {
+  max-width: 600px;
+}
+@media screen and (min-width: 768px) {
+  .menu_longer .menu_org {
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu_longer .menu_org {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+}
+.menu_longer .menu_org .starter {
   overflow: hidden;
 }
-.menu_longer .starter > h3 {
+@media screen and (min-width: 992px) {
+  .menu_longer .menu_org .starter {
+    width: 45%;
+  }
+}
+.menu_longer .menu_org .starter > h3 {
   font-weight: normal;
   font-size: 110%;
   width: 45px;
   height: 25px;
   border-bottom: 3px solid #99E2D0;
 }
-.menu_longer .starter .starter_card {
+.menu_longer .menu_org .starter .starter_card {
   text-decoration: none;
   color: black;
   display: block;
@@ -789,28 +962,28 @@ footer p {
   animation: fading-menu 0.6s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
 }
-.menu_longer .starter .starter_card:hover .coche {
+.menu_longer .menu_org .starter .starter_card:hover .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu_longer .starter .starter_card:hover .coche > i {
+.menu_longer .menu_org .starter .starter_card:hover .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
 }
-.menu_longer .starter .starter_card .starter_desc {
+.menu_longer .menu_org .starter .starter_card .starter_desc {
   margin-top: 0px;
   padding-left: 10px;
   width: 100%;
   overflow: hidden;
 }
-.menu_longer .starter .starter_card .starter_desc > h3 {
+.menu_longer .menu_org .starter .starter_card .starter_desc > h3 {
   margin-top: 10px;
   margin-bottom: 15px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu_longer .starter .starter_card .starter_desc > h4 {
+.menu_longer .menu_org .starter .starter_card .starter_desc > h4 {
   margin: 0;
   font-size: 90%;
   font-weight: normal;
@@ -818,18 +991,18 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu_longer .starter .starter_card .price {
+.menu_longer .menu_org .starter .starter_card .price {
   display: flex;
   align-items: flex-end;
   margin-right: 20px;
   margin-left: auto;
   padding-right: 10px;
 }
-.menu_longer .starter .starter_card .price p {
+.menu_longer .menu_org .starter .starter_card .price p {
   font-weight: bold;
   margin-bottom: 5px;
 }
-.menu_longer .starter .starter_card .coche {
+.menu_longer .menu_org .starter .starter_card .coche {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -838,29 +1011,34 @@ footer p {
   color: white;
   margin-right: -90px;
 }
-.menu_longer .starter .delay-1 {
+.menu_longer .menu_org .starter .delay-1 {
   animation: fading-menu 0.8s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 0.8s ease-in-out 0s forwards;
 }
-.menu_longer .starter .delay-2 {
+.menu_longer .menu_org .starter .delay-2 {
   animation: fading-menu 1s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1s ease-in-out 0s forwards;
 }
-.menu_longer .starter .delay-3 {
+.menu_longer .menu_org .starter .delay-3 {
   animation: fading-menu 1.2s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
 }
-.menu_longer .dish {
+.menu_longer .menu_org .dish {
   overflow: hidden;
 }
-.menu_longer .dish > h3 {
+@media screen and (min-width: 992px) {
+  .menu_longer .menu_org .dish {
+    width: 45%;
+  }
+}
+.menu_longer .menu_org .dish > h3 {
   font-weight: normal;
   font-size: 110%;
   width: 45px;
   height: 25px;
   border-bottom: 3px solid #99E2D0;
 }
-.menu_longer .dish .dish_card {
+.menu_longer .menu_org .dish .dish_card {
   text-decoration: none;
   color: black;
   display: block;
@@ -876,28 +1054,28 @@ footer p {
   animation: fading-menu 1.4s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
 }
-.menu_longer .dish .dish_card:hover .coche {
+.menu_longer .menu_org .dish .dish_card:hover .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu_longer .dish .dish_card:hover .coche > i {
+.menu_longer .menu_org .dish .dish_card:hover .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
 }
-.menu_longer .dish .dish_card .dish_desc {
+.menu_longer .menu_org .dish .dish_card .dish_desc {
   margin-top: 0px;
   padding-left: 10px;
   width: 100%;
   overflow: hidden;
 }
-.menu_longer .dish .dish_card .dish_desc > h3 {
+.menu_longer .menu_org .dish .dish_card .dish_desc > h3 {
   margin-top: 10px;
   margin-bottom: 15px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu_longer .dish .dish_card .dish_desc > h4 {
+.menu_longer .menu_org .dish .dish_card .dish_desc > h4 {
   margin: 0;
   font-size: 90%;
   font-weight: normal;
@@ -905,18 +1083,18 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu_longer .dish .dish_card .price {
+.menu_longer .menu_org .dish .dish_card .price {
   display: flex;
   align-items: flex-end;
   margin-right: 20px;
   margin-left: auto;
   padding-right: 10px;
 }
-.menu_longer .dish .dish_card .price p {
+.menu_longer .menu_org .dish .dish_card .price p {
   font-weight: bold;
   margin-bottom: 5px;
 }
-.menu_longer .dish .dish_card .coche {
+.menu_longer .menu_org .dish .dish_card .coche {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -925,25 +1103,30 @@ footer p {
   color: white;
   margin-right: -90px;
 }
-.menu_longer .dish .delay-1 {
+.menu_longer .menu_org .dish .delay-1 {
   animation: fading-menu 1.6s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.6s ease-in-out 0s forwards;
 }
-.menu_longer .dish .delay-2 {
+.menu_longer .menu_org .dish .delay-2 {
   animation: fading-menu 1.8s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
 }
-.menu_longer .dessert {
+.menu_longer .menu_org .dessert {
   overflow: hidden;
 }
-.menu_longer .dessert > h3 {
+@media screen and (min-width: 992px) {
+  .menu_longer .menu_org .dessert {
+    width: 45%;
+  }
+}
+.menu_longer .menu_org .dessert > h3 {
   font-weight: normal;
   font-size: 110%;
   width: 45px;
   height: 25px;
   border-bottom: 3px solid #99E2D0;
 }
-.menu_longer .dessert .dessert_card {
+.menu_longer .menu_org .dessert .dessert_card {
   text-decoration: none;
   color: black;
   display: block;
@@ -959,28 +1142,28 @@ footer p {
   animation: fading-menu 2s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
 }
-.menu_longer .dessert .dessert_card:hover .coche {
+.menu_longer .menu_org .dessert .dessert_card:hover .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu_longer .dessert .dessert_card:hover .coche > i {
+.menu_longer .menu_org .dessert .dessert_card:hover .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
 }
-.menu_longer .dessert .dessert_card .dessert_desc {
+.menu_longer .menu_org .dessert .dessert_card .dessert_desc {
   margin-top: 0px;
   padding-left: 10px;
   width: 100%;
   overflow: hidden;
 }
-.menu_longer .dessert .dessert_card .dessert_desc > h3 {
+.menu_longer .menu_org .dessert .dessert_card .dessert_desc > h3 {
   margin-top: 10px;
   margin-bottom: 15px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu_longer .dessert .dessert_card .dessert_desc > h4 {
+.menu_longer .menu_org .dessert .dessert_card .dessert_desc > h4 {
   margin: 0;
   font-size: 90%;
   font-weight: normal;
@@ -988,18 +1171,18 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu_longer .dessert .dessert_card .price {
+.menu_longer .menu_org .dessert .dessert_card .price {
   display: flex;
   align-items: flex-end;
   margin-right: 20px;
   margin-left: auto;
   padding-right: 10px;
 }
-.menu_longer .dessert .dessert_card .price p {
+.menu_longer .menu_org .dessert .dessert_card .price p {
   font-weight: bold;
   margin-bottom: 5px;
 }
-.menu_longer .dessert .dessert_card .coche {
+.menu_longer .menu_org .dessert .dessert_card .coche {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1008,11 +1191,11 @@ footer p {
   color: white;
   margin-right: -90px;
 }
-.menu_longer .dessert .delay-1 {
+.menu_longer .menu_org .dessert .delay-1 {
   animation: fading-menu 2.2s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 2.2s ease-in-out 0s forwards;
 }
-.menu_longer .dessert .delay-2 {
+.menu_longer .menu_org .dessert .delay-2 {
   animation: fading-menu 2.4s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 2.4s ease-in-out 0s forwards;
 }
@@ -1023,6 +1206,13 @@ footer p {
 }
 .menu_longer > form #btn-explore input {
   width: 175px;
+}
+@media screen and (min-width: 992px) {
+  .menu_longer > form #btn-explore input {
+    width: 250px;
+    height: 55px;
+    font-size: 130%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
