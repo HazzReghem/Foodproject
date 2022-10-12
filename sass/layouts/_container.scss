@@ -240,13 +240,23 @@
                     padding-right: 20px;
                     > i {
                         font-size: 150%;
-                        &:hover::before {
+                        &:active::before {
                             transition: all ease-in-out 500ms;
                             background-clip: text;
                             -webkit-background-clip: text;
                             background-image: linear-gradient($colour-secondary, $colour-primary);
                             -webkit-text-fill-color: transparent;
                             font-weight: 900;
+                        }
+                        @include desktop {
+                            &:hover::before {
+                                transition: all ease-in-out 500ms;
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                background-image: linear-gradient($colour-secondary, $colour-primary);
+                                -webkit-text-fill-color: transparent;
+                                font-weight: 900;
+                            }
                         }
                     }
                 }
@@ -401,13 +411,23 @@ footer {
         > i {
             font-size: 150%;
             margin-right: 30px;
-            &:hover::before {
+            &:active::before {
                 transition: all ease-in-out 500ms;
                 background-clip: text;
                 -webkit-background-clip: text;
                 background-image: linear-gradient($colour-secondary, $colour-primary);
                 -webkit-text-fill-color: transparent;
                 font-weight: 900;
+            }
+            @include desktop {
+                &:hover::before {
+                    transition: all ease-in-out 500ms;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    background-image: linear-gradient($colour-secondary, $colour-primary);
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 900;
+                }
             }
         }
     }
@@ -436,7 +456,7 @@ footer {
                 border-bottom: 3px solid $colour-tertiary;
             }
             .starter_card {
-            text-decoration: none;
+                text-decoration: none;
                 color: black;
                 display: block;
                 height: 70px;
@@ -450,13 +470,25 @@ footer {
                 animation: fading-menu 0.6s ease-in-out 0s forwards;
                 -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
                 cursor: pointer;
-                &:hover {
+                &:active {
                     .coche {
                         margin-right: 0;
                         transition: margin-right 0.5s ease-out;
                         > i {
                             transform: rotate(360deg);
                             transition: transform 0.8s;
+                        }
+                    }
+                }
+                @include desktop {
+                    &:hover {
+                        .coche {
+                            margin-right: 0;
+                            transition: margin-right 0.5s ease-out;
+                            > i {
+                                transform: rotate(360deg);
+                                transition: transform 0.8s;
+                            }
                         }
                     }
                 }
@@ -538,13 +570,25 @@ footer {
                 box-shadow: 0px 3px 5px 1px $colour-shadow;
                 animation: fading-menu 1.2s ease-in-out 0s forwards;
                 -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
-                &:hover {
+                &:active {
                     .coche {
                         margin-right: 0;
                         transition: margin-right 0.5s ease-out;
                         > i {
                             transform: rotate(360deg);
                             transition: transform 0.8s;
+                        }
+                    }
+                }
+                @include desktop {
+                    &:hover {
+                        .coche {
+                            margin-right: 0;
+                            transition: margin-right 0.5s ease-out;
+                            > i {
+                                transform: rotate(360deg);
+                                transition: transform 0.8s;
+                            }
                         }
                     }
                 }
@@ -626,13 +670,25 @@ footer {
                 box-shadow: 0px 3px 5px 1px $colour-shadow;
                 animation: fading-menu 1.8s ease-in-out 0s forwards;
                 -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
-                &:hover {
+                &:active {
                     .coche {
                         margin-right: 0;
                         transition: margin-right 0.5s ease-out;
                         > i {
                             transform: rotate(360deg);
                             transition: transform 0.8s;
+                        }
+                    }
+                }
+                @include desktop {
+                    &:hover {
+                        .coche {
+                            margin-right: 0;
+                            transition: margin-right 0.5s ease-out;
+                            > i {
+                                transform: rotate(360deg);
+                                transition: transform 0.8s;
+                            }
                         }
                     }
                 }
@@ -748,13 +804,23 @@ footer {
         > i {
             font-size: 150%;
             margin-right: 30px;
-            &:hover::before {
+            &:active::before {
                 transition: all ease-in-out 500ms;
                 background-clip: text;
                 -webkit-background-clip: text;
                 background-image: linear-gradient($colour-secondary, $colour-primary);
                 -webkit-text-fill-color: transparent;
                 font-weight: 900;
+            }
+            @include desktop {
+                &:hover::before {
+                    transition: all ease-in-out 500ms;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    background-image: linear-gradient($colour-secondary, $colour-primary);
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 900;
+                }
             }
         }
     }
@@ -796,13 +862,25 @@ footer {
                 box-shadow: 0px 3px 5px 1px $colour-shadow;
                 animation: fading-menu 0.6s ease-in-out 0s forwards;
                 -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
-                &:hover {
+                &:active {
                     .coche {
                         margin-right: 0;
                         transition: margin-right 0.5s ease-out;
                         > i {
                             transform: rotate(360deg);
                             transition: transform 0.8s;
+                        }
+                    }
+                }
+                @include desktop {
+                    &:hover {
+                        .coche {
+                            margin-right: 0;
+                            transition: margin-right 0.5s ease-out;
+                            > i {
+                                transform: rotate(360deg);
+                                transition: transform 0.8s;
+                            }
                         }
                     }
                 }
@@ -888,13 +966,25 @@ footer {
                 box-shadow: 0px 3px 5px 1px $colour-shadow;
                 animation: fading-menu 1.4s ease-in-out 0s forwards;
                 -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
-                &:hover {
+                &:active {
                     .coche {
                         margin-right: 0;
                         transition: margin-right 0.5s ease-out;
                         > i {
                             transform: rotate(360deg);
                             transition: transform 0.8s;
+                        }
+                    }
+                }
+                @include desktop {
+                    &:hover {
+                        .coche {
+                            margin-right: 0;
+                            transition: margin-right 0.5s ease-out;
+                            > i {
+                                transform: rotate(360deg);
+                                transition: transform 0.8s;
+                            }
                         }
                     }
                 }
@@ -976,13 +1066,25 @@ footer {
                 box-shadow: 0px 3px 5px 1px $colour-shadow;
                 animation: fading-menu 2s ease-in-out 0s forwards;
                 -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
-                &:hover {
+                &:active {
                     .coche {
                         margin-right: 0;
                         transition: margin-right 0.5s ease-out;
                         > i {
                             transform: rotate(360deg);
                             transition: transform 0.8s;
+                        }
+                    }
+                }
+                @include desktop {
+                    &:hover {
+                        .coche {
+                            margin-right: 0;
+                            transition: margin-right 0.5s ease-out;
+                            > i {
+                                transform: rotate(360deg);
+                                transition: transform 0.8s;
+                            }
                         }
                     }
                 }

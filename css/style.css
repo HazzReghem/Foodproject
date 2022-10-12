@@ -385,13 +385,23 @@
 #restaurants a .card .card_desc .card_fav > i {
   font-size: 150%;
 }
-#restaurants a .card .card_desc .card_fav > i:hover::before {
+#restaurants a .card .card_desc .card_fav > i:active::before {
   transition: all ease-in-out 500ms;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-text-fill-color: transparent;
   font-weight: 900;
+}
+@media screen and (min-width: 992px) {
+  #restaurants a .card .card_desc .card_fav > i:hover::before {
+    transition: all ease-in-out 500ms;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+  }
 }
 #restaurants a .card .card_desc .card_texte {
   width: 90%;
@@ -559,13 +569,23 @@ footer p {
   font-size: 150%;
   margin-right: 30px;
 }
-.menu .menu_title > i:hover::before {
+.menu .menu_title > i:active::before {
   transition: all ease-in-out 500ms;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-text-fill-color: transparent;
   font-weight: 900;
+}
+@media screen and (min-width: 992px) {
+  .menu .menu_title > i:hover::before {
+    transition: all ease-in-out 500ms;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+  }
 }
 .menu .menu_org {
   max-width: 600px;
@@ -614,13 +634,23 @@ footer p {
   -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
   cursor: pointer;
 }
-.menu .menu_org .starter .starter_card:hover .coche {
+.menu .menu_org .starter .starter_card:active .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu .menu_org .starter .starter_card:hover .coche > i {
+.menu .menu_org .starter .starter_card:active .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
+}
+@media screen and (min-width: 992px) {
+  .menu .menu_org .starter .starter_card:hover .coche {
+    margin-right: 0;
+    transition: margin-right 0.5s ease-out;
+  }
+  .menu .menu_org .starter .starter_card:hover .coche > i {
+    transform: rotate(360deg);
+    transition: transform 0.8s;
+  }
 }
 .menu .menu_org .starter .starter_card .starter_desc {
   margin-top: 0px;
@@ -702,13 +732,23 @@ footer p {
   animation: fading-menu 1.2s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
 }
-.menu .menu_org .dish .dish_card:hover .coche {
+.menu .menu_org .dish .dish_card:active .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu .menu_org .dish .dish_card:hover .coche > i {
+.menu .menu_org .dish .dish_card:active .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
+}
+@media screen and (min-width: 992px) {
+  .menu .menu_org .dish .dish_card:hover .coche {
+    margin-right: 0;
+    transition: margin-right 0.5s ease-out;
+  }
+  .menu .menu_org .dish .dish_card:hover .coche > i {
+    transform: rotate(360deg);
+    transition: transform 0.8s;
+  }
 }
 .menu .menu_org .dish .dish_card .dish_desc {
   margin-top: 0px;
@@ -790,13 +830,23 @@ footer p {
   animation: fading-menu 1.8s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
 }
-.menu .menu_org .dessert .dessert_card:hover .coche {
+.menu .menu_org .dessert .dessert_card:active .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu .menu_org .dessert .dessert_card:hover .coche > i {
+.menu .menu_org .dessert .dessert_card:active .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
+}
+@media screen and (min-width: 992px) {
+  .menu .menu_org .dessert .dessert_card:hover .coche {
+    margin-right: 0;
+    transition: margin-right 0.5s ease-out;
+  }
+  .menu .menu_org .dessert .dessert_card:hover .coche > i {
+    transform: rotate(360deg);
+    transition: transform 0.8s;
+  }
 }
 .menu .menu_org .dessert .dessert_card .dessert_desc {
   margin-top: 0px;
@@ -907,13 +957,23 @@ footer p {
   font-size: 150%;
   margin-right: 30px;
 }
-.menu_longer .menu_title > i:hover::before {
+.menu_longer .menu_title > i:active::before {
   transition: all ease-in-out 500ms;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-text-fill-color: transparent;
   font-weight: 900;
+}
+@media screen and (min-width: 992px) {
+  .menu_longer .menu_title > i:hover::before {
+    transition: all ease-in-out 500ms;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+  }
 }
 .menu_longer .menu_org {
   max-width: 600px;
@@ -962,13 +1022,23 @@ footer p {
   animation: fading-menu 0.6s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
 }
-.menu_longer .menu_org .starter .starter_card:hover .coche {
+.menu_longer .menu_org .starter .starter_card:active .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu_longer .menu_org .starter .starter_card:hover .coche > i {
+.menu_longer .menu_org .starter .starter_card:active .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
+}
+@media screen and (min-width: 992px) {
+  .menu_longer .menu_org .starter .starter_card:hover .coche {
+    margin-right: 0;
+    transition: margin-right 0.5s ease-out;
+  }
+  .menu_longer .menu_org .starter .starter_card:hover .coche > i {
+    transform: rotate(360deg);
+    transition: transform 0.8s;
+  }
 }
 .menu_longer .menu_org .starter .starter_card .starter_desc {
   margin-top: 0px;
@@ -1054,13 +1124,23 @@ footer p {
   animation: fading-menu 1.4s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
 }
-.menu_longer .menu_org .dish .dish_card:hover .coche {
+.menu_longer .menu_org .dish .dish_card:active .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu_longer .menu_org .dish .dish_card:hover .coche > i {
+.menu_longer .menu_org .dish .dish_card:active .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
+}
+@media screen and (min-width: 992px) {
+  .menu_longer .menu_org .dish .dish_card:hover .coche {
+    margin-right: 0;
+    transition: margin-right 0.5s ease-out;
+  }
+  .menu_longer .menu_org .dish .dish_card:hover .coche > i {
+    transform: rotate(360deg);
+    transition: transform 0.8s;
+  }
 }
 .menu_longer .menu_org .dish .dish_card .dish_desc {
   margin-top: 0px;
@@ -1142,13 +1222,23 @@ footer p {
   animation: fading-menu 2s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
 }
-.menu_longer .menu_org .dessert .dessert_card:hover .coche {
+.menu_longer .menu_org .dessert .dessert_card:active .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu_longer .menu_org .dessert .dessert_card:hover .coche > i {
+.menu_longer .menu_org .dessert .dessert_card:active .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
+}
+@media screen and (min-width: 992px) {
+  .menu_longer .menu_org .dessert .dessert_card:hover .coche {
+    margin-right: 0;
+    transition: margin-right 0.5s ease-out;
+  }
+  .menu_longer .menu_org .dessert .dessert_card:hover .coche > i {
+    transform: rotate(360deg);
+    transition: transform 0.8s;
+  }
 }
 .menu_longer .menu_org .dessert .dessert_card .dessert_desc {
   margin-top: 0px;
