@@ -357,7 +357,7 @@ footer {
     font-family: $roboto;
     height: 1515px;
     @include desktop {
-        height: 1385px;
+        height: 1045px;
     }
 }
 
@@ -366,7 +366,7 @@ footer {
     width: 100%;
     font-family: $roboto;
     @include desktop {
-        height: 1470px;
+        height: 1145px;
     }
 }
 
@@ -394,7 +394,7 @@ footer {
     position: relative;
     bottom: 70px;
     @include desktop {
-        height: 940px;
+        height: 580px;
     }
     .menu_title {
         font-family: $shrik;
@@ -446,7 +446,7 @@ footer {
         .starter {
             overflow: hidden;
             @include desktop {
-                width: 45%;
+                width: 30%;
             }
             > h3 {
                 font-weight: normal;
@@ -546,7 +546,7 @@ footer {
         .dish {
             overflow: hidden;
             @include desktop {
-                width: 45%;
+                width: 30%;
             }
             > h3 {
                 font-weight: normal;
@@ -629,7 +629,7 @@ footer {
                     align-items: center;
                     justify-content: center;
                     width: 80px;
-                    background: darken($colour-tertiary , 10%);
+                    background: $colour-tertiary;
                     color: white;
                     margin-right: -90px;
                 }
@@ -646,7 +646,7 @@ footer {
         .dessert {
             overflow: hidden;
             @include desktop {
-                width: 45%;
+                width: 30%;
             }
             > h3 {
                 font-weight: normal;
@@ -729,7 +729,7 @@ footer {
                     align-items: center;
                     justify-content: center;
                     width: 80px;
-                    background: darken($colour-tertiary , 10%);
+                    background: $colour-tertiary;
                     color: white;
                     margin-right: -90px;
                 }
@@ -787,7 +787,7 @@ footer {
     position: relative;
     bottom: 70px;
     @include desktop {
-        height: 1025px;
+        height: 680px;
     }
     .menu_title {
         font-family: $shrik;
@@ -838,7 +838,7 @@ footer {
         .starter {
             overflow: hidden;
             @include desktop {
-                width: 45%;
+                width: 30%;
             }
             > h3 {
                 font-weight: normal;
@@ -921,7 +921,7 @@ footer {
                     align-items: center;
                     justify-content: center;
                     width: 80px;
-                    background: darken($colour-tertiary , 10%);
+                    background: $colour-tertiary;
                     color: white;
                     margin-right: -90px;
                 }
@@ -942,7 +942,7 @@ footer {
         .dish {
             overflow: hidden;
             @include desktop {
-                width: 45%;
+                width: 30%;
             }
             > h3 {
                 font-weight: normal;
@@ -1025,7 +1025,7 @@ footer {
                     align-items: center;
                     justify-content: center;
                     width: 80px;
-                    background: darken($colour-tertiary , 10%);
+                    background: $colour-tertiary;
                     color: white;
                     margin-right: -90px;
                 }
@@ -1042,7 +1042,7 @@ footer {
         .dessert {
             overflow: hidden;
             @include desktop {
-                width: 45%;
+                width: 30%;
             }
             > h3 {
                 font-weight: normal;

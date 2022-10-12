@@ -24,12 +24,15 @@
     align-items: center;
     background-color: #eaeaea;
     box-shadow: inset 1px 2px 5px 1px $colour-shadow;
+    padding-left: 45px;
     i {
         padding-right: 20px;
     }
-    p {
-        position: relative;
-        right: 10px;
+    #search_bar {
+        border: none;
+        background: #eaeaea;
+        outline: none;
+        max-width: 20ch;
     }
     @include desktop {
         height: 70px;

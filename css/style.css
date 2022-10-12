@@ -65,13 +65,16 @@
   align-items: center;
   background-color: #eaeaea;
   box-shadow: inset 1px 2px 5px 1px #d3d3d3;
+  padding-left: 45px;
 }
 #localize i {
   padding-right: 20px;
 }
-#localize p {
-  position: relative;
-  right: 10px;
+#localize #search_bar {
+  border: none;
+  background: #eaeaea;
+  outline: none;
+  max-width: 20ch;
 }
 @media screen and (min-width: 992px) {
   #localize {
@@ -506,7 +509,7 @@ footer p {
 }
 @media screen and (min-width: 992px) {
   .wrapper_card {
-    height: 1385px;
+    height: 1045px;
   }
 }
 
@@ -517,7 +520,7 @@ footer p {
 }
 @media screen and (min-width: 992px) {
   .wrapper_card2 {
-    height: 1470px;
+    height: 1145px;
   }
 }
 
@@ -549,7 +552,7 @@ footer p {
 }
 @media screen and (min-width: 992px) {
   .menu {
-    height: 940px;
+    height: 580px;
   }
 }
 .menu .menu_title {
@@ -608,7 +611,7 @@ footer p {
 }
 @media screen and (min-width: 992px) {
   .menu .menu_org .starter {
-    width: 45%;
+    width: 30%;
   }
 }
 .menu .menu_org .starter > h3 {
@@ -706,7 +709,7 @@ footer p {
 }
 @media screen and (min-width: 992px) {
   .menu .menu_org .dish {
-    width: 45%;
+    width: 30%;
   }
 }
 .menu .menu_org .dish > h3 {
@@ -787,7 +790,7 @@ footer p {
   align-items: center;
   justify-content: center;
   width: 80px;
-  background: #71d7be;
+  background: #99E2D0;
   color: white;
   margin-right: -90px;
 }
@@ -804,7 +807,7 @@ footer p {
 }
 @media screen and (min-width: 992px) {
   .menu .menu_org .dessert {
-    width: 45%;
+    width: 30%;
   }
 }
 .menu .menu_org .dessert > h3 {
@@ -885,7 +888,7 @@ footer p {
   align-items: center;
   justify-content: center;
   width: 80px;
-  background: #71d7be;
+  background: #99E2D0;
   color: white;
   margin-right: -90px;
 }
@@ -937,7 +940,7 @@ footer p {
 }
 @media screen and (min-width: 992px) {
   .menu_longer {
-    height: 1025px;
+    height: 680px;
   }
 }
 .menu_longer .menu_title {
@@ -996,7 +999,7 @@ footer p {
 }
 @media screen and (min-width: 992px) {
   .menu_longer .menu_org .starter {
-    width: 45%;
+    width: 30%;
   }
 }
 .menu_longer .menu_org .starter > h3 {
@@ -1077,7 +1080,7 @@ footer p {
   align-items: center;
   justify-content: center;
   width: 80px;
-  background: #71d7be;
+  background: #99E2D0;
   color: white;
   margin-right: -90px;
 }
@@ -1098,7 +1101,7 @@ footer p {
 }
 @media screen and (min-width: 992px) {
   .menu_longer .menu_org .dish {
-    width: 45%;
+    width: 30%;
   }
 }
 .menu_longer .menu_org .dish > h3 {
@@ -1179,7 +1182,7 @@ footer p {
   align-items: center;
   justify-content: center;
   width: 80px;
-  background: #71d7be;
+  background: #99E2D0;
   color: white;
   margin-right: -90px;
 }
@@ -1196,7 +1199,7 @@ footer p {
 }
 @media screen and (min-width: 992px) {
   .menu_longer .menu_org .dessert {
-    width: 45%;
+    width: 30%;
   }
 }
 .menu_longer .menu_org .dessert > h3 {
