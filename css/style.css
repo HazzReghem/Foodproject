@@ -386,7 +386,7 @@
 #restaurants a .card .card_desc .card_fav > i {
   font-size: 150%;
 }
-#restaurants a .card .card_desc .card_fav > i:active::before {
+#restaurants a .card .card_desc .card_fav > i:focus::before {
   transition: all ease-in-out 500ms;
   background-clip: text;
   -webkit-background-clip: text;
@@ -570,7 +570,7 @@ footer p {
   font-size: 150%;
   margin-right: 30px;
 }
-.menu .menu_title > i:active::before {
+.menu .menu_title > i:focus::before {
   transition: all ease-in-out 500ms;
   background-clip: text;
   -webkit-background-clip: text;
@@ -635,11 +635,11 @@ footer p {
   -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
   cursor: pointer;
 }
-.menu .menu_org .starter .starter_card:active .coche {
+.menu .menu_org .starter .starter_card:focus .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu .menu_org .starter .starter_card:active .coche > i {
+.menu .menu_org .starter .starter_card:focus .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
 }
@@ -733,11 +733,11 @@ footer p {
   animation: fading-menu 1.2s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.2s ease-in-out 0s forwards;
 }
-.menu .menu_org .dish .dish_card:active .coche {
+.menu .menu_org .dish .dish_card:focus .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu .menu_org .dish .dish_card:active .coche > i {
+.menu .menu_org .dish .dish_card:focus .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
 }
@@ -831,11 +831,11 @@ footer p {
   animation: fading-menu 1.8s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.8s ease-in-out 0s forwards;
 }
-.menu .menu_org .dessert .dessert_card:active .coche {
+.menu .menu_org .dessert .dessert_card:focus .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu .menu_org .dessert .dessert_card:active .coche > i {
+.menu .menu_org .dessert .dessert_card:focus .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
 }
@@ -957,7 +957,7 @@ footer p {
   font-size: 150%;
   margin-right: 30px;
 }
-.menu_longer .menu_title > i:active::before {
+.menu_longer .menu_title > i:focus::before {
   transition: all ease-in-out 500ms;
   background-clip: text;
   -webkit-background-clip: text;
@@ -1022,11 +1022,11 @@ footer p {
   animation: fading-menu 0.6s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 0.6s ease-in-out 0s forwards;
 }
-.menu_longer .menu_org .starter .starter_card:active .coche {
+.menu_longer .menu_org .starter .starter_card:focus .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu_longer .menu_org .starter .starter_card:active .coche > i {
+.menu_longer .menu_org .starter .starter_card:focus .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
 }
@@ -1124,11 +1124,11 @@ footer p {
   animation: fading-menu 1.4s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 1.4s ease-in-out 0s forwards;
 }
-.menu_longer .menu_org .dish .dish_card:active .coche {
+.menu_longer .menu_org .dish .dish_card:focus .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu_longer .menu_org .dish .dish_card:active .coche > i {
+.menu_longer .menu_org .dish .dish_card:focus .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
 }
@@ -1222,11 +1222,11 @@ footer p {
   animation: fading-menu 2s ease-in-out 0s forwards;
   -webkit-animation: fading-menu 2s ease-in-out 0s forwards;
 }
-.menu_longer .menu_org .dessert .dessert_card:active .coche {
+.menu_longer .menu_org .dessert .dessert_card:focus .coche {
   margin-right: 0;
   transition: margin-right 0.5s ease-out;
 }
-.menu_longer .menu_org .dessert .dessert_card:active .coche > i {
+.menu_longer .menu_org .dessert .dessert_card:focus .coche > i {
   transform: rotate(360deg);
   transition: transform 0.8s;
 }
